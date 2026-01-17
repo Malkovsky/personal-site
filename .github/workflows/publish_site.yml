@@ -34,7 +34,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build site
-        run: ./build.sh
+        run: bash build.sh
       - name: Publish pages
         uses: actions/upload-pages-artifact@v3
         with:
