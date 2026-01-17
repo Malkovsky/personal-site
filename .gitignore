@@ -50,7 +50,6 @@ Thumbs.db
 .env.local
 
 # Build outputs
-*.html
 !README.html
 *.pdf
 !resume.pdf
