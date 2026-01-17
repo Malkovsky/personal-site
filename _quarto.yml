@@ -1,0 +1,67 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Your Name"
+  description: "Personal website and blog"
+  site-url: https://yourwebsite.com
+  repo-url: https://github.com/yourusername/blog
+  repo-actions: [edit, issue]
+  
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Blog"
+        href: blog/index.qmd
+      - text: "Projects"
+        href: projects/index.qmd
+      - text: "Publications"
+        href: publications.qmd
+      - text: "Resume"
+        href: resume.qmd
+      - text: "Contact"
+        href: contact.qmd
+    
+    right:
+      - icon: github
+        href: https://github.com/yourusername
+      - icon: twitter
+        href: https://twitter.com/yourusername
+      - icon: linkedin
+        href: https://linkedin.com/in/yourusername
+  
+  page-footer:
+    left: |
+      Copyright © 2026 Your Name
+    right:
+      - icon: github
+        href: https://github.com/yourusername
+      - icon: twitter  
+        href: https://twitter.com/yourusername
+      - icon: envelope
+        href: mailto:your.email@example.com
+
+format:
+  html:
+    theme: 
+      light: cosmo
+      dark: darkly
+    css: styles/custom.scss
+    toc: true
+    toc-depth: 3
+    link-external-newwindow: true
+    code-copy: true
+    code-overflow: wrap
+    anchor-sections: true
+    smooth-scroll: true
+    
+# Execution options for Jupyter notebooks
+execute:
+  freeze: auto
+  cache: true

@@ -1,0 +1,147 @@
+---
+title: "Contact"
+subtitle: "Let's connect!"
+page-layout: article
+title-block-banner: true
+---
+
+I'm always happy to connect with fellow developers, researchers, and data enthusiasts. Whether you have a question, collaboration idea, or just want to chat about technology, feel free to reach out!
+
+---
+
+## Get in Touch
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+### Email
+[{{< fa envelope >}} your.email@example.com](mailto:your.email@example.com)
+
+Best for: Professional inquiries, collaboration proposals
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### GitHub
+[{{< fa brands github >}} @yourusername](https://github.com/yourusername)
+
+Best for: Code discussions, bug reports, contributions
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### LinkedIn
+[{{< fa brands linkedin >}} Your Name](https://linkedin.com/in/yourusername)
+
+Best for: Professional networking, job opportunities
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Twitter
+[{{< fa brands twitter >}} @yourusername](https://twitter.com/yourusername)
+
+Best for: Quick questions, casual conversations
+:::
+
+:::
+
+---
+
+## What I Can Help With
+
+I'm particularly interested in discussions about:
+
+- **Data Science & Machine Learning** - Model development, deployment, MLOps
+- **Software Development** - Python, JavaScript, web development
+- **Technical Writing** - Blog collaborations, documentation
+- **Open Source** - Contributing to or starting new projects
+- **Mentorship** - Career advice for aspiring data scientists/developers
+- **Speaking Opportunities** - Conferences, podcasts, webinars
+
+---
+
+## Response Time
+
+I try to respond to all messages within **2-3 business days**. For urgent matters, please mention that in your subject line.
+
+::: {.callout-note}
+## Job Opportunities
+If you're reaching out about job opportunities, please include the job description and company information. I'm primarily interested in:
+
+- Remote-friendly positions
+- Data Science/ML Engineering roles
+- Technical leadership opportunities
+- Interesting research projects
+:::
+
+---
+
+## Find Me Online
+
+::: {.grid}
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+[{{< fa brands github size=2x >}}](https://github.com/yourusername)
+
+GitHub
+:::
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+[{{< fa brands linkedin size=2x >}}](https://linkedin.com/in/yourusername)
+
+LinkedIn
+:::
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+[{{< fa brands twitter size=2x >}}](https://twitter.com/yourusername)
+
+Twitter
+:::
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+[{{< fa rss size=2x >}}](blog.xml)
+
+RSS Feed
+:::
+
+:::
+
+---
+
+## Other Links
+
+- **Google Scholar** - [View Profile](https://scholar.google.com/citations?user=yourprofile)
+- **ResearchGate** - [View Profile](https://researchgate.net/profile/yourprofile)
+- **Stack Overflow** - [View Profile](https://stackoverflow.com/users/yourprofile)
+- **Medium** - [@yourusername](https://medium.com/@yourusername)
+
+---
+
+## Location
+
+📍 Based in **[Your City, Country]**
+
+*Available for remote work worldwide and occasional travel for conferences/meetings.*
+
+---
+
+::: {.callout-tip}
+## Before You Reach Out
+
+- Check out my [blog](blog/index.qmd) - your question might already be answered!
+- Browse my [projects](projects/index.qmd) to see what I'm working on
+- Review my [resume](resume.qmd) for professional background
+:::
+
+---
+
+## Alternative Contact Form
+
+If you prefer using a contact form, you can reach me through:
+
+- [LinkedIn Messages](https://linkedin.com/in/yourusername)
+- [Twitter DM](https://twitter.com/yourusername)
+
+*Note: A dedicated contact form can be added using services like Formspree, Netlify Forms, or similar solutions.*
+
+---
+
+Looking forward to hearing from you! 👋

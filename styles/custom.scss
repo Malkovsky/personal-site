@@ -1,0 +1,296 @@
+/*-- scss:defaults --*/
+
+// Custom color scheme
+$primary: #2E86AB;
+$secondary: #A23B72;
+$success: #06A77D;
+$info: #17A2B8;
+$warning: #F18F01;
+$danger: #C73E1D;
+
+// Typography
+$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace: "Fira Code", "JetBrains Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
+$headings-font-weight: 600;
+
+// Spacing
+$spacer: 1rem;
+
+/*-- scss:rules --*/
+
+// Hero banner styling
+.hero-banner {
+  text-align: center;
+  padding: 3rem 1rem;
+  
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: $primary;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #555;
+  }
+  
+  .btn {
+    margin: 0.5rem;
+  }
+}
+
+// Profile photo styling
+.profile-photo {
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  display: block;
+}
+
+// Project cards
+.project-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  h3 {
+    color: $primary;
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    color: $primary;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Publication styling
+.publication {
+  border-left: 4px solid $primary;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+  
+  p:first-child {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  em {
+    color: #666;
+  }
+  
+  a {
+    color: $primary;
+    margin-right: 1rem;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// Blog preview styling
+.blog-preview {
+  .quarto-listing {
+    .card {
+      border: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+      
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+
+// Code block styling
+pre {
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+code {
+  font-family: $font-family-monospace;
+}
+
+// Callout styling improvements
+.callout {
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  
+  &.callout-tip {
+    border-left-color: $success;
+  }
+  
+  &.callout-note {
+    border-left-color: $info;
+  }
+  
+  &.callout-warning {
+    border-left-color: $warning;
+  }
+  
+  &.callout-important {
+    border-left-color: $danger;
+  }
+}
+
+// Navbar customization
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+}
+
+// Footer styling
+.nav-footer {
+  border-top: 1px solid #e0e0e0;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  
+  a {
+    color: #666;
+    
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+// Link styling
+a {
+  color: $primary;
+  transition: color 0.2s;
+  
+  &:hover {
+    color: darken($primary, 10%);
+  }
+}
+
+// Button styling
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  
+  &:hover {
+    background-color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+  }
+}
+
+.btn-outline-primary {
+  color: $primary;
+  border-color: $primary;
+  
+  &:hover {
+    background-color: $primary;
+    border-color: $primary;
+    color: white;
+  }
+}
+
+// Table styling
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  
+  th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-bottom: 2px solid $primary;
+  }
+  
+  td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  tr:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .hero-banner {
+    h2 {
+      font-size: 2rem;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+  .project-card {
+    margin-bottom: 1rem;
+  }
+}
+
+// Dark mode adjustments
+@media (prefers-color-scheme: dark) {
+  .project-card {
+    border-color: #444;
+    
+    &:hover {
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    }
+  }
+  
+  .publication {
+    border-left-color: lighten($primary, 20%);
+  }
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Grid layout improvements
+.grid {
+  gap: 1.5rem;
+}
+
+// Icon sizing
+.fa-2x {
+  font-size: 2em;
+}
+
+// Social links styling
+.text-center {
+  text-align: center;
+  
+  a {
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s;
+    
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

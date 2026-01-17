@@ -1,0 +1,75 @@
+# Quarto
+*.quarto/
+*.freeze/
+/_site/
+/_book/
+/_manuscript/
+
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Build outputs
+*.html
+!README.html
+*.pdf
+!resume.pdf
+
+# Node modules (if using npm/yarn for tooling)
+node_modules/
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
+# Cache
+.cache/
+*.cache
+
+# Freeze directory for computational content
+/_freeze/
+
+**/*.quarto_ipynb
+
+/.quarto/

@@ -1,0 +1,191 @@
+---
+title: "Публикации"
+subtitle: "Академические и технические публикации"
+page-layout: article
+title-block-banner: true
+---
+
+На этой странице представлены мои академические публикации, презентации на конференциях, технические статьи и другие письменные работы.
+
+---
+
+## Академические публикации
+
+### 2024
+
+::: {.publication}
+**Подходы глубокого обучения для прогнозирования временных рядов на финансовых рынках**
+
+*Ваше Имя*, Имя соавтора
+
+*Journal of Machine Learning Research*, Том 25, стр. 123-145, 2024
+
+[DOI: 10.1234/jmlr.2024.001](https://doi.org/10.1234/jmlr.2024.001) | [PDF](papers/paper-2024-01.pdf) | [Код](https://github.com/yourusername/timeseries-dl)
+
+:::
+
+::: {.publication}
+**Масштабируемая архитектура для обработки данных в реальном времени**
+
+*Ваше Имя*, Второй автор, Третий автор
+
+*ACM Transactions on Database Systems*, Том 49, № 2, 2024
+
+[DOI: 10.1234/tods.2024.002](https://doi.org/10.1234/tods.2024.002) | [PDF](papers/paper-2024-02.pdf)
+
+:::
+
+### 2023
+
+::: {.publication}
+**Transfer Learning для NLP задач с ограниченными ресурсами**
+
+*Ваше Имя*, Имя сотрудника
+
+*Proceedings of EMNLP 2023*, стр. 567-578
+
+[DOI: 10.1234/emnlp.2023.003](https://doi.org/10.1234/emnlp.2023.003) | [PDF](papers/paper-2023-01.pdf) | [Слайды](talks/emnlp-2023-slides.pdf)
+
+:::
+
+### 2022
+
+::: {.publication}
+**Интерпретируемое машинное обучение: Сравнительное исследование**
+
+*Ваше Имя*
+
+*International Conference on Machine Learning (ICML)*, Workshop on Interpretability, 2022
+
+[PDF](papers/paper-2022-01.pdf) | [Постер](talks/icml-2022-poster.pdf)
+
+:::
+
+---
+
+## Презентации на конференциях
+
+### 2024
+
+- **"Создание производственных ML систем в масштабе"**  
+  *PyData Global 2024*, Сентябрь 2024  
+  [Слайды](talks/pydata-2024-slides.pdf) | [Видео](https://youtube.com/watch?v=example)
+
+- **"Современные практики Data Engineering"**  
+  *Data + AI Summit 2024*, Июнь 2024  
+  [Слайды](talks/data-ai-2024-slides.pdf)
+
+### 2023
+
+- **"MLOps: От прототипа к продакшену"**  
+  *KDD 2023*, Август 2023  
+  [Слайды](talks/kdd-2023-slides.pdf) | [Код](https://github.com/yourusername/mlops-demo)
+
+- **"Этический ИИ: Вызовы и решения"**  
+  *AI Ethics Conference 2023*, Март 2023  
+  [Слайды](talks/ai-ethics-2023-slides.pdf)
+
+---
+
+## Технические статьи и посты в блоге
+
+### Избранные статьи
+
+- **"Полное руководство по нейронным сетям"**  
+  *Towards Data Science*, Январь 2024  
+  [Читать статью](https://towardsdatascience.com/example) • 15K просмотров
+
+- **"Отладка моделей машинного обучения"**  
+  *Better Programming*, Ноябрь 2023  
+  [Читать статью](https://betterprogramming.pub/example) • 8K просмотров
+
+- **"Введение в Quarto для Data Scientists"**
+  *Личный блог*, Октябрь 2023
+  [Читать статью](../en/blog/posts/2026-01-15-getting-started-with-quarto/index.html)
+
+### Все посты в блоге
+
+Полный список постов в блоге см. в разделе [Блог](blog/index.qmd).
+
+---
+
+## Главы в книгах
+
+::: {.publication}
+**Глава 7: Машинное обучение в продакшене**
+
+В книге *Справочник по Data Science*, редакторы Smith, J. & Jones, A.
+
+Издательство, 2023
+
+[Ссылка на книгу](https://publisher.com/book)
+
+:::
+
+---
+
+## Патенты и белые книги
+
+### Патенты
+
+- **Система и метод автоматизированной оценки качества данных**  
+  Патент на рассмотрении, Заявка № US-2024-001234, Подано: Март 2024
+
+### Белые книги
+
+- **Лучшие практики развертывания ML моделей в облачных средах**  
+  Технический отчет компании, 2023  
+  [PDF](papers/whitepaper-cloud-ml.pdf)
+
+---
+
+## Диссертация
+
+::: {.publication}
+**Магистерская диссертация - "Подходы глубокого обучения для прогнозирования временных рядов"**
+
+*Название университета*, 2019
+
+Научный руководитель: Проф. Имя научного руководителя
+
+[PDF](papers/masters-thesis.pdf)
+
+**Аннотация** - Эта диссертация исследует применение методов глубокого обучения, включая архитектуры LSTM и Transformer, для задач прогнозирования временных рядов. Мы демонстрируем значительные улучшения по сравнению с традиционными статистическими методами на нескольких реальных наборах данных.
+
+:::
+
+---
+
+## Информация для цитирования
+
+Если вы используете мою работу в своих исследованиях, пожалуйста, цитируйте:
+
+```bibtex
+@article{yourname2024timeseries,
+  title={Deep Learning Approaches for Time Series Forecasting in Financial Markets},
+  author={Your Name and Co-Author Name},
+  journal={Journal of Machine Learning Research},
+  volume={25},
+  pages={123--145},
+  year={2024}
+}
+```
+
+---
+
+## Метрики
+
+- **Всего публикаций** - 8 рецензируемых статей
+- **Цитирования** - 250+ (Google Scholar)
+- **h-индекс** - 6
+- **Презентации на конференциях** - 10+
+
+[Профиль Google Scholar](https://scholar.google.com/citations?user=yourprofile) | [ResearchGate](https://researchgate.net/profile/yourprofile) | [ORCID](https://orcid.org/0000-0000-0000-0000)
+
+---
+
+::: {.callout-note}
+## Сотрудничество
+
+Я всегда заинтересован в исследовательском сотрудничестве. Если вы работаете над чем-то интересным, [давайте свяжемся](contact.qmd)!
+:::

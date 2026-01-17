@@ -1,0 +1,74 @@
+project:
+  type: website
+  output-dir: ../_site/ru
+
+website:
+  title: "Ваше Имя"
+  description: "Персональный сайт и блог"
+  site-url: https://yourwebsite.com/ru
+  repo-url: https://github.com/yourusername/blog
+  repo-actions: [edit, issue]
+  
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Главная"
+        href: index.qmd
+      - text: "Обо мне"
+        href: about.qmd
+      - text: "Блог"
+        href: blog/index.qmd
+      - text: "Проекты"
+        href: projects/index.qmd
+      - text: "Публикации"
+        href: publications.qmd
+      - text: "Резюме"
+        href: resume.qmd
+      - text: "Контакты"
+        href: contact.qmd
+    
+    right:
+      - text: "🇬🇧 EN"
+        href: ../en/index.html
+        aria-label: "Переключить на английский"
+      - icon: github
+        href: https://github.com/yourusername
+        aria-label: "GitHub"
+      - icon: twitter
+        href: https://twitter.com/yourusername
+        aria-label: "Twitter"
+      - icon: linkedin
+        href: https://linkedin.com/in/yourusername
+        aria-label: "LinkedIn"
+  
+  page-footer:
+    left: |
+      Copyright © 2026 Ваше Имя
+    right:
+      - icon: github
+        href: https://github.com/yourusername
+      - icon: twitter  
+        href: https://twitter.com/yourusername
+      - icon: envelope
+        href: mailto:your.email@example.com
+
+format:
+  html:
+    theme: 
+      light: cosmo
+      dark: darkly
+    css: ../styles/custom.scss
+    toc: true
+    toc-depth: 3
+    link-external-newwindow: true
+    code-copy: true
+    code-overflow: wrap
+    anchor-sections: true
+    smooth-scroll: true
+    lang: ru
+    
+# Execution options for Jupyter notebooks
+execute:
+  freeze: auto
+  cache: true

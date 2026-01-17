@@ -1,0 +1,179 @@
+---
+title: "Resume"
+subtitle: "Professional Experience & Education"
+page-layout: article
+title-block-banner: true
+format:
+  html:
+    toc: true
+  pdf:
+    toc: false
+---
+
+::: {.callout-note}
+## Download PDF
+[Download Resume as PDF](resume.pdf){.btn .btn-primary}
+:::
+
+## Professional Experience
+
+### Senior Data Scientist
+**Company Name** | *City, Country* | Jan 2023 - Present
+
+- Led a team of 3 data scientists in developing machine learning models for customer churn prediction, achieving 85% accuracy
+- Designed and implemented end-to-end data pipelines processing 10M+ records daily
+- Collaborated with product teams to integrate ML models into production systems
+- Mentored junior data scientists and conducted technical workshops
+
+**Key Technologies** - Python, TensorFlow, PyTorch, SQL, AWS, Docker
+
+---
+
+### Data Scientist
+**Another Company** | *City, Country* | Jun 2020 - Dec 2022
+
+- Built recommendation systems serving 500K+ daily active users
+- Developed automated reporting dashboards reducing analysis time by 60%
+- Conducted A/B tests to optimize user engagement metrics
+- Published findings in company tech blog and presented at internal conferences
+
+**Key Technologies** - Python, scikit-learn, Apache Spark, PostgreSQL, Tableau
+
+---
+
+### Junior Data Analyst
+**First Company** | *City, Country* | Jan 2019 - May 2020
+
+- Performed statistical analysis on customer behavior data
+- Created interactive visualizations for stakeholder presentations
+- Automated data collection and cleaning processes
+- Assisted in developing predictive models for sales forecasting
+
+**Key Technologies** - Python, R, SQL, Excel, Power BI
+
+---
+
+## Education
+
+### Master of Science in Data Science
+**University Name** | *City, Country* | 2017 - 2019
+
+- **Thesis** - "Deep Learning Approaches for Time Series Forecasting"
+- **GPA** - 3.9/4.0
+- **Relevant Coursework** - Machine Learning, Statistical Modeling, Big Data Analytics, Neural Networks
+
+### Bachelor of Science in Computer Science
+**University Name** | *City, Country* | 2013 - 2017
+
+- **GPA** - 3.7/4.0
+- **Honors** - Dean's List (2015-2017)
+- **Relevant Coursework** - Data Structures, Algorithms, Database Systems, AI
+
+---
+
+## Skills
+
+### Technical Skills
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+**Programming Languages**
+- Python (Expert)
+- R (Advanced)
+- SQL (Advanced)
+- JavaScript (Intermediate)
+- Julia (Intermediate)
+:::
+
+::: {.g-col-12 .g-col-md-6}
+**ML/AI Frameworks**
+- TensorFlow
+- PyTorch
+- scikit-learn
+- Keras
+- XGBoost
+:::
+
+::: {.g-col-12 .g-col-md-6}
+**Data Tools**
+- Jupyter/Quarto
+- Apache Spark
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Tableau, Power BI
+:::
+
+::: {.g-col-12 .g-col-md-6}
+**Cloud & DevOps**
+- AWS (EC2, S3, SageMaker)
+- Docker & Kubernetes
+- Git/GitHub
+- CI/CD pipelines
+:::
+
+:::
+
+### Soft Skills
+
+- Technical Writing & Documentation
+- Team Leadership & Mentoring
+- Cross-functional Collaboration
+- Presentation & Communication
+- Project Management
+
+---
+
+## Certifications
+
+- **AWS Certified Machine Learning - Specialty** | Amazon Web Services | 2023
+- **TensorFlow Developer Certificate** | Google | 2022
+- **Professional Data Scientist** | DataCamp | 2021
+
+---
+
+## Publications & Talks
+
+### Conference Presentations
+
+- "Scaling ML Models in Production" - PyData Conference 2023
+- "Best Practices for MLOps" - Data Science Summit 2022
+
+### Blog Posts
+
+- ["Building Production-Ready ML Pipelines"](blog/index.qmd) - Technical Blog, 2023
+- ["Introduction to Deep Learning"](blog/index.qmd) - Medium, 2022
+
+See [Publications](publications.qmd) page for a complete list.
+
+---
+
+## Awards & Achievements
+
+- **Employee of the Year** - Company Name, 2023
+- **Best Presentation Award** - Internal Data Science Conference, 2022
+- **Hackathon Winner** - Company Innovation Challenge, 2021
+
+---
+
+## Languages
+
+- **English** - Native/Fluent
+- **[Other Language]** - Professional Working Proficiency
+- **[Another Language]** - Limited Working Proficiency
+
+---
+
+## Volunteer Work
+
+### Data Science Mentor
+**Non-Profit Organization** | 2021 - Present
+
+Mentoring aspiring data scientists from underrepresented backgrounds, providing career guidance and technical support.
+
+---
+
+::: {.callout-tip}
+## Let's Connect
+Interested in working together? [Get in touch](contact.qmd) or view my [projects](projects/index.qmd).
+:::

@@ -1,0 +1,24 @@
+# Blog posts metadata
+# This file applies to all posts in the posts/ directory
+
+# Freeze computational output
+freeze: true
+
+# Author info
+author: "Your Name"
+
+# Citation
+citation: 
+  url: https://yourwebsite.com/blog/posts
+
+# Format options
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: false
+    code-tools: true
+    code-copy: true
+    
+# Categories
+categories: unnumbered

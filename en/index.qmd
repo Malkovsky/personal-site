@@ -1,0 +1,95 @@
+---
+title: "Your Name"
+subtitle: "Data Scientist | Developer | Writer"
+page-layout: full
+title-block-banner: true
+---
+
+::: {.hero-banner}
+
+## Welcome! 👋
+
+I'm a passionate [data scientist/developer/researcher] with expertise in [your areas of expertise]. I love building [what you build] and sharing knowledge through writing and teaching.
+
+[About Me →](about.qmd){.btn .btn-primary .btn-lg}
+[View Projects →](projects/index.qmd){.btn .btn-outline-primary .btn-lg}
+
+:::
+
+---
+
+## Recent Blog Posts
+
+::: {#blog-listing}
+:::
+
+```{=html}
+<div class="quarto-listing quarto-listing-container-default" id="blog-listing">
+<div class="list quarto-listing-default">
+```
+
+::: {.blog-preview}
+<!-- This section will automatically display recent blog posts -->
+<!-- Quarto will populate this when you have posts in blog/posts/ -->
+:::
+
+```{=html}
+</div>
+</div>
+```
+
+[View All Posts →](blog/index.qmd){.btn .btn-sm .btn-outline-secondary}
+
+---
+
+## Featured Projects
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+### Project One
+A brief description of your first featured project. What problem does it solve? What technologies did you use?
+
+**Tech Stack** - Python, FastAPI, PostgreSQL
+
+[View Project →](projects/index.qmd)
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Project Two
+A brief description of your second featured project. Highlight the impact and interesting technical challenges.
+
+**Tech Stack** - JavaScript, React, Node.js
+
+[View Project →](projects/index.qmd)
+:::
+
+:::
+
+[View All Projects →](projects/index.qmd){.btn .btn-sm .btn-outline-secondary}
+
+---
+
+## Let's Connect
+
+I'm always interested in collaborating on interesting projects or discussing new ideas.
+
+::: {.grid}
+
+::: {.g-col-6 .g-col-md-3}
+[{{< fa brands github >}} GitHub](https://github.com/yourusername)
+:::
+
+::: {.g-col-6 .g-col-md-3}
+[{{< fa brands linkedin >}} LinkedIn](https://linkedin.com/in/yourusername)
+:::
+
+::: {.g-col-6 .g-col-md-3}
+[{{< fa brands twitter >}} Twitter](https://twitter.com/yourusername)
+:::
+
+::: {.g-col-6 .g-col-md-3}
+[{{< fa envelope >}} Email](mailto:your.email@example.com)
+:::
+
+:::

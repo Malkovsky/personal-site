@@ -1,0 +1,99 @@
+---
+title: "About Me"
+subtitle: "Get to know me better"
+page-layout: article
+title-block-banner: true
+---
+
+![Replace with your profile photo](images/profile.jpg){.profile-photo fig-align="center" width="250px"}
+
+## Hi, I'm [Your Name]
+
+I'm a [your profession/role] based in [your location]. With [X] years of experience in [your field], I specialize in [your specialties].
+
+### What I Do
+
+I focus on [main areas of work]:
+
+- **Data Science & Analytics** - Building predictive models and extracting insights from complex datasets
+- **Software Development** - Creating scalable applications and tools
+- **Research** - Exploring [your research interests]
+- **Writing & Teaching** - Sharing knowledge through blog posts and tutorials
+
+### My Journey
+
+My journey into [your field] started when [brief story about how you got started]. Since then, I've worked on [types of projects] and collaborated with [types of organizations/people].
+
+Currently, I'm [what you're doing now - studying, working at X, freelancing, etc.].
+
+### Skills & Expertise
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+#### Programming Languages
+- Python
+- R
+- JavaScript/TypeScript
+- SQL
+:::
+
+::: {.g-col-12 .g-col-md-6}
+#### Tools & Technologies
+- Jupyter/Quarto
+- Git/GitHub
+- Docker
+- Cloud platforms (AWS/GCP/Azure)
+:::
+
+::: {.g-col-12 .g-col-md-6}
+#### Data Science
+- Machine Learning
+- Statistical Analysis
+- Data Visualization
+- Deep Learning
+:::
+
+::: {.g-col-12 .g-col-md-6}
+#### Soft Skills
+- Technical Writing
+- Project Management
+- Communication
+- Problem Solving
+:::
+
+:::
+
+### Education
+
+**[Degree Name]** - [University Name]  
+[Year] | [Major/Specialization]
+
+**[Another Degree]** - [Institution]  
+[Year] | [Major/Specialization]
+
+### Interests
+
+When I'm not coding or analyzing data, I enjoy:
+
+- 📚 Reading [genres you like]
+- 🎮 Gaming
+- 🏃 Fitness and outdoor activities
+- 🎵 Music
+- ✈️ Travel
+
+### Let's Connect
+
+I'm always open to interesting conversations and collaboration opportunities. Feel free to reach out!
+
+- **Email** - [your.email@example.com](mailto:your.email@example.com)
+- **GitHub** - [@yourusername](https://github.com/yourusername)
+- **LinkedIn** - [Your Name](https://linkedin.com/in/yourusername)
+- **Twitter** - [@yourusername](https://twitter.com/yourusername)
+
+---
+
+::: {.callout-note}
+## Looking for my resume?
+You can find a detailed version of my professional experience on the [Resume](resume.qmd) page or download a PDF copy.
+:::

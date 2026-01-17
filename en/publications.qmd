@@ -1,0 +1,191 @@
+---
+title: "Publications"
+subtitle: "Academic & Technical Writing"
+page-layout: article
+title-block-banner: true
+---
+
+This page lists my academic publications, conference presentations, technical articles, and other written works.
+
+---
+
+## Academic Publications
+
+### 2024
+
+::: {.publication}
+**Deep Learning Approaches for Time Series Forecasting in Financial Markets**
+
+*Your Name*, Co-Author Name
+
+*Journal of Machine Learning Research*, Vol. 25, pp. 123-145, 2024
+
+[DOI: 10.1234/jmlr.2024.001](https://doi.org/10.1234/jmlr.2024.001) | [PDF](papers/paper-2024-01.pdf) | [Code](https://github.com/yourusername/timeseries-dl)
+
+:::
+
+::: {.publication}
+**Scalable Architecture for Real-Time Data Processing**
+
+*Your Name*, Second Author, Third Author
+
+*ACM Transactions on Database Systems*, Vol. 49, No. 2, 2024
+
+[DOI: 10.1234/tods.2024.002](https://doi.org/10.1234/tods.2024.002) | [PDF](papers/paper-2024-02.pdf)
+
+:::
+
+### 2023
+
+::: {.publication}
+**Transfer Learning for Low-Resource NLP Tasks**
+
+*Your Name*, Collaborator Name
+
+*Proceedings of EMNLP 2023*, pp. 567-578
+
+[DOI: 10.1234/emnlp.2023.003](https://doi.org/10.1234/emnlp.2023.003) | [PDF](papers/paper-2023-01.pdf) | [Slides](talks/emnlp-2023-slides.pdf)
+
+:::
+
+### 2022
+
+::: {.publication}
+**Interpretable Machine Learning: A Comparative Study**
+
+*Your Name*
+
+*International Conference on Machine Learning (ICML)*, Workshop on Interpretability, 2022
+
+[PDF](papers/paper-2022-01.pdf) | [Poster](talks/icml-2022-poster.pdf)
+
+:::
+
+---
+
+## Conference Presentations
+
+### 2024
+
+- **"Building Production ML Systems at Scale"**  
+  *PyData Global 2024*, September 2024  
+  [Slides](talks/pydata-2024-slides.pdf) | [Video](https://youtube.com/watch?v=example)
+
+- **"Modern Data Engineering Practices"**  
+  *Data + AI Summit 2024*, June 2024  
+  [Slides](talks/data-ai-2024-slides.pdf)
+
+### 2023
+
+- **"MLOps: From Prototype to Production"**  
+  *KDD 2023*, August 2023  
+  [Slides](talks/kdd-2023-slides.pdf) | [Code](https://github.com/yourusername/mlops-demo)
+
+- **"Ethical AI: Challenges and Solutions"**  
+  *AI Ethics Conference 2023*, March 2023  
+  [Slides](talks/ai-ethics-2023-slides.pdf)
+
+---
+
+## Technical Articles & Blog Posts
+
+### Featured Articles
+
+- **"A Comprehensive Guide to Neural Networks"**  
+  *Towards Data Science*, January 2024  
+  [Read Article](https://towardsdatascience.com/example) • 15K views
+
+- **"Debugging Machine Learning Models"**  
+  *Better Programming*, November 2023  
+  [Read Article](https://betterprogramming.pub/example) • 8K views
+
+- **"Introduction to Quarto for Data Scientists"**  
+  *Personal Blog*, October 2023  
+  [Read Article](blog/posts/2026-01-15-getting-started-with-quarto/index.qmd)
+
+### All Blog Posts
+
+For a complete list of blog posts, visit the [Blog](blog/index.qmd) section.
+
+---
+
+## Book Chapters
+
+::: {.publication}
+**Chapter 7: Machine Learning in Production**
+
+In *The Data Science Handbook*, eds. Smith, J. & Jones, A.
+
+Publisher Name, 2023
+
+[Book Link](https://publisher.com/book)
+
+:::
+
+---
+
+## Patents & White Papers
+
+### Patents
+
+- **System and Method for Automated Data Quality Assessment**  
+  Patent Pending, Application No. US-2024-001234, Filed: March 2024
+
+### White Papers
+
+- **Best Practices for Deploying ML Models in Cloud Environments**  
+  Company Technical Report, 2023  
+  [PDF](papers/whitepaper-cloud-ml.pdf)
+
+---
+
+## Thesis
+
+::: {.publication}
+**Master's Thesis - "Deep Learning Approaches for Time Series Forecasting"**
+
+*University Name*, 2019
+
+Advisor: Prof. Advisor Name
+
+[PDF](papers/masters-thesis.pdf)
+
+**Abstract** - This thesis explores the application of deep learning techniques, including LSTM and Transformer architectures, for time series forecasting tasks. We demonstrate significant improvements over traditional statistical methods across multiple real-world datasets.
+
+:::
+
+---
+
+## Citation Information
+
+If you use my work in your research, please cite:
+
+```bibtex
+@article{yourname2024timeseries,
+  title={Deep Learning Approaches for Time Series Forecasting in Financial Markets},
+  author={Your Name and Co-Author Name},
+  journal={Journal of Machine Learning Research},
+  volume={25},
+  pages={123--145},
+  year={2024}
+}
+```
+
+---
+
+## Metrics
+
+- **Total Publications** - 8 peer-reviewed papers
+- **Citations** - 250+ (Google Scholar)
+- **h-index** - 6
+- **Conference Presentations** - 10+
+
+[Google Scholar Profile](https://scholar.google.com/citations?user=yourprofile) | [ResearchGate](https://researchgate.net/profile/yourprofile) | [ORCID](https://orcid.org/0000-0000-0000-0000)
+
+---
+
+::: {.callout-note}
+## Collaboration
+
+I'm always interested in research collaboration. If you're working on something interesting, [let's connect](contact.qmd)!
+:::

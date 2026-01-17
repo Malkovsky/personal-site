@@ -1,0 +1,119 @@
+---
+title: "Projects"
+subtitle: "A showcase of my work"
+page-layout: full
+title-block-banner: true
+---
+
+Here are some of the projects I've worked on. Each represents a unique challenge and learning opportunity.
+
+## Featured Projects
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .project-card}
+### 🚀 Project Alpha
+
+A machine learning platform for automated data analysis and visualization. Built to help analysts quickly explore datasets and generate insights.
+
+**Technologies** - Python, FastAPI, React, PostgreSQL, Docker
+
+**Key Features:**
+
+- Automated EDA (Exploratory Data Analysis)
+- Interactive visualizations
+- RESTful API
+- Real-time data processing
+
+- [GitHub](https://github.com/yourusername/project-alpha) 
+- [Demo](https://project-alpha-demo.com) 
+- [Documentation](https://docs.project-alpha.com)
+
+:::
+
+::: {.g-col-12 .g-col-md-6 .project-card}
+### 📊 Data Viz Dashboard
+
+An interactive dashboard for analyzing and visualizing business metrics. Supports multiple data sources and real-time updates.
+
+**Technologies** - JavaScript, D3.js, Node.js, MongoDB
+
+**Key Features:**
+
+- Real-time data streaming
+- Customizable widgets
+- Export to PDF/PNG
+- Multi-user collaboration
+
+- [GitHub](https://github.com/yourusername/viz-dashboard) 
+- [Demo](https://viz-dashboard-demo.com)
+
+:::
+
+::: {.g-col-12 .g-col-md-6 .project-card}
+### 🤖 ML Model Toolkit
+
+A comprehensive toolkit for training, evaluating, and deploying machine learning models. Includes pre-built pipelines for common tasks.
+
+**Technologies** - Python, scikit-learn, TensorFlow, MLflow
+
+**Key Features:**
+
+- Model versioning
+- Automated hyperparameter tuning
+- Performance monitoring
+- One-click deployment
+
+- [GitHub](https://github.com/yourusername/ml-toolkit) 
+- [Documentation](https://ml-toolkit-docs.com)
+
+:::
+
+::: {.g-col-12 .g-col-md-6 .project-card}
+### 📝 Markdown Blog Engine
+
+A lightweight, static site generator optimized for technical blogs. Supports Jupyter notebooks, math equations, and code highlighting.
+
+**Technologies** - JavaScript, Quarto, GitHub Actions
+
+**Key Features:**
+
+- Jupyter notebook integration
+- Automatic deployment
+- SEO optimized
+- Responsive design
+
+- [GitHub](https://github.com/yourusername/blog-engine) 
+- [Demo](https://blog-engine-demo.com)
+
+:::
+
+:::
+
+## Open Source Contributions
+
+I actively contribute to open source projects:
+
+- **[Project Name]** - [Brief description of contribution]
+- **[Another Project]** - [What you contributed]
+- **[Library/Tool]** - [Your involvement]
+
+## Archived Projects
+
+::: {.callout-note collapse="true"}
+## View Older Projects
+
+### Legacy Data Pipeline
+A data ETL pipeline built with Apache Airflow. [View on GitHub](https://github.com/yourusername/legacy-pipeline)
+
+### Web Scraper Collection
+Collection of web scrapers for various data sources. [View on GitHub](https://github.com/yourusername/scrapers)
+
+:::
+
+
+::: {.callout-tip}
+## Interested in collaborating?
+
+I'm always looking for interesting projects to work on. If you have an idea or want to collaborate, [get in touch](../contact.qmd)!
+:::

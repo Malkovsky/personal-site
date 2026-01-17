@@ -1,0 +1,8 @@
+# Projects metadata
+# This file applies to all project pages
+
+# Format options
+format:
+  html:
+    toc: true
+    toc-depth: 2
