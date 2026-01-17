@@ -27,7 +27,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ghcr.io/quarto-dev/quarto:latest
+    runs-on: ubuntu-latest
+    container:
+        image: ghcr.io/quarto-dev/quarto:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
