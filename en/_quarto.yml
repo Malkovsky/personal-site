@@ -5,8 +5,8 @@ project:
 website:
   title: "Your Name"
   description: "Personal website and blog"
-  site-url: https://yourwebsite.com/en
-  repo-url: https://github.com/yourusername/blog
+  site-url: https://malkovsky.github.io/personal-site/en
+  repo-url: https://github.com/Malkovsky/personal-site
   repo-actions: [edit, issue]
   
   navbar:
