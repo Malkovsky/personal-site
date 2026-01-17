@@ -34,7 +34,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build site
-        run: bash build.sh
+        run: | 
+            quarto install --no-prompt tinytex
+            bash build.sh
       - name: Publish pages
         uses: actions/upload-pages-artifact@v3
         with:
