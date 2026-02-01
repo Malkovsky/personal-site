@@ -1,6 +1,6 @@
 ---
-title: "Your Name"
-subtitle: "Data Scientist | Developer | Writer"
+title: "Nikolay Malkovsky"
+subtitle: "Mathematician | Software engineer"
 page-layout: full
 title-block-banner: true
 ---
@@ -9,7 +9,7 @@ title-block-banner: true
 
 ## Welcome! 👋
 
-I'm a passionate [data scientist/developer/researcher] with expertise in [your areas of expertise]. I love building [what you build] and sharing knowledge through writing and teaching.
+I'm a applied mathematitian and a software engineer, my passion is scientific computing of all kind and this is where I excel. Check out the details in the following sections!
 
 [About Me →](about.qmd){.btn .btn-primary .btn-lg}
 [View Projects →](projects/index.qmd){.btn .btn-outline-primary .btn-lg}
@@ -47,21 +47,17 @@ I'm a passionate [data scientist/developer/researcher] with expertise in [your a
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
-### Project One
-A brief description of your first featured project. What problem does it solve? What technologies did you use?
+### Interactive Visualization
+Interactive algorithm visualizations in Python. Recommended for educational purposes, not ideal for complex visualizations.
 
-**Tech Stack** - Python, FastAPI, PostgreSQL
-
-[View Project →](projects/index.qmd)
+<!-- [View Project →](projects/index.qmd) -->
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-### Project Two
-A brief description of your second featured project. Highlight the impact and interesting technical challenges.
+### QR Verbose
+A utility and library for advanced QR code generation with verbose diagnostics. Intended primarily for educational purposes — if you want to understand how a QR code works, this tool is a good place to start.
 
-**Tech Stack** - JavaScript, React, Node.js
-
-[View Project →](projects/index.qmd)
+<!-- [View Project →](projects/index.qmd) -->
 :::
 
 :::
@@ -77,19 +73,24 @@ I'm always interested in collaborating on interesting projects or discussing new
 ::: {.grid}
 
 ::: {.g-col-6 .g-col-md-3}
-[{{< fa brands github >}} GitHub](https://github.com/yourusername)
+[{{< fa brands github >}} GitHub](https://github.com/Malkovsky)
 :::
 
 ::: {.g-col-6 .g-col-md-3}
-[{{< fa brands linkedin >}} LinkedIn](https://linkedin.com/in/yourusername)
+[{{< fa brands linkedin >}} LinkedIn](https://linkedin.com/in/nikolay-malkovsky-a5479b140)
 :::
 
 ::: {.g-col-6 .g-col-md-3}
-[{{< fa brands twitter >}} Twitter](https://twitter.com/yourusername)
+[![](https://habrastorage.org/getpro/habr/company/7e4/7b8/e31/7e47b8e31d0efe9f398461278a16a357.png){width=20px} Habr](https://habr.com/ru/users/malkovsky/)
 :::
 
 ::: {.g-col-6 .g-col-md-3}
-[{{< fa envelope >}} Email](mailto:your.email@example.com)
+[{{< fa envelope >}} Email](mailto:malkovskynv@gmail.com)
 :::
+
+::: {.g-col-6 .g-col-md-3}
+[{{< fa brands telegram >}} Telegram](https://t.me/malkovskynv)
+:::
+
 
 :::

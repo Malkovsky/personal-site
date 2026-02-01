@@ -72,3 +72,4 @@ node_modules/
 **/*.quarto_ipynb
 
 /.quarto/
+**_extensions**

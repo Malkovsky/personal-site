@@ -1,0 +1,120 @@
+%% start of file `new.tex'.
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,roman]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\rmdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\firstname{Nikolay}
+\familyname{Malkovsky}
+\title{Curriculum Vitae}               % optional, remove the line if not wanted
+% \address{Harchenko 11, St. Petersburg, Russia}    % optional, remove the line if not wanted
+\mobile{@malkovskynv}                     % optional, remove the line if not wanted
+%\phone{+2~(345)~678~901}                      % optional, remove the line if not wanted
+%\fax{+3~(456)~789~012}                        % optional, remove the line if not wanted
+\email{malkovskynv@gmail.com}                          % optional, remove the line if not wanted
+\homepage{github.com/Malkovsky}                    % optional, remove the line if not wanted
+% \homepage{habr.com/ru/users/malkovsky}   
+\extrainfo{\url{habr.com/ru/users/malkovsky}}            % optional, remove the line if not wanted
+%\photo[110pt][0.01pt]{picture.jpg}                  % '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                     % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Work Experience}
+
+\cventry{2021-2022}{Sr. Researcher}{}{TCS group, AI department}{}{}
+\cvlistitem{Transformer-based zero short text cleaning}
+\cvlistitem{R\&D for core parts for CTC end-2-end ASR systems, WFST-based context biasing for end-2-end}
+\cventry{2018--2021}{Researcher/Sr. Researcher}{}{STC-innovations, Research Department}{}{}
+\cvlistitem{R\&D of HMM part of hybrid HMM-DNN ASR systems: A lot of finite automata based solutions: Word bounds extraction, algorithms for low latency streaming recognition, algorithms for vocabulary expansion, lattice generation and conversion to confusion network, lattice rescoring with RNN language models}
+
+\cventry{2017--2022}{Assistant professor}{}{St. Petersburg State University and St. Petersburg department of Higher School of Economics}{}{}
+\cvlistitem{\href{https://nbviewer.jupyter.org/github/Malkovsky/python-examples/tree/master/optimization_course/}{Course on convex optimization (in russian, clickable)}}
+\cventry{2022--2023}{Developer}{Yandex}{Yandex Market}{}{}
+% \section{Recent Publications}
+% \cvlistitem{\textit{Medennikov I. et al.} The STC system for the CHiME 2018 challenge //The 5th International Workshop on Speech Processing in Everyday Environments (CHiME 2018), Interspeech. – 2018.}
+\cventry{2023--.......}{Principle researcher}{Huawei}{2012 laboratories}{}{}
+% \cvlistitem{\textit{Rogozin A. et al.} Optimal distributed convex optimization on slowly time-varying graphs //IEEE Transactions on Control of Network Systems. – 2019.}
+\cvlistitem{Improvement of QUIC protocol for file transfer and real time communication scenarios via congestion control algorithms}
+\cvlistitem{Techlead of the R\&D project on forward error correction codes and their applications to real time communication data transfer: a lot of advanced Reed-Solomon and convolutional code implementations.}
+\cvlistitem{Author of \href{https://codeforces.com/gym/106111}{TechArena 2025 SPbSU challenge}}
+
+
+\section{Languages}
+
+\cvlistitem {russian: native, english: fluent}
+
+\section{Education}
+\cventry{2008--2013}{Master degree}{}{GPA: 4.5/5, St. Petersburg State University, St. Petersburg, Russia}{}{}{}
+
+\cventry{2013--2017}{Ph.D. in computer science (candidate of science)}{}{St. Petersburg State University, St. Petersburg, Russia}{}{}{}
+\cvlistitem {\textbf{Ph.D. Thesis:} "\textit{Randomized resource distribution algorithms in multiagent systems}," under supervision of \textbf{Prof. Oleg Granichin} }
+
+% \section{Additional Study}
+
+% \cvlistitem{\href{https://coursera.org/share/7a90f4f35eddb9c1f2d080a624bf2f11}{\textbf{Natural language processing by DeepLearning.AI}}}
+
+\section{Skills}
+\cvlistitem {\textbf{Strong algorithmic skills} \\ Developed performance demanding real time systems for different application areas: a lot of graph/finite automata routines for HMM part of ASR systems, finite field computations and coding theory for data protection, SOTA implementations of succinct data structures}
+
+\cvlistitem{\textbf{Strong with C/C++} \\ Prime programming language, lead and mainained several algorithmically rich C/C++ projects of medium size ($10^5$-$10^6$ lines of code), experienced with hardware-aware optimization, i.e. cache locality improvement and manual SIMD impementations.}
+
+
+\cvlistitem {\textbf{Strong mathematical background} \\ Candidate of science in the computer science field (candidate of physics/math, russian). All of my successful projects were mathematically rich.}
+
+\cvlistitem{\textbf{Strong with Python} \\ Prime programming language for scripting/prototyping, typically experimenting in Jupyter with vast usage of numpy, scipy, sklearn, matplotlib, pytorch/torchscript. For some specific bottleneck cases I know how to write a C/C++ library and invoke it from Python.}
+
+\cvlistitem{\textbf{Strong with ASR frameworks} \\ Developed projects that were based on kaldi, DeepSpeech, Nemo.}
+
+\cvlistitem{\textbf{Decent with microservice stack} \\ Have experience with building microservices with Docker, gRPC, Kubernetes}
+
+%\cvlistitem{\textbf{Decent leading skill} \\ Currently leading a project on %distributed machine learning with a group of 4 students}
+
+\cvlistitem{\textbf{Decent leading skills} \\ My major achievement of the last year is leading (in both technical and management sense) a group of algorithmically skillful undergraduates, two of them were first year students with IOI gold medals. I organized a clear workflow that made it easy for them to contribute a clear code despite their lack of experience in development.}
+
+
+
+% \section{Interests}
+% \cvitem{Music}{Playing the piano}
+% \cvitem{Origami}{Can make a very good volumetric origami flowers}
+
+
+\end{document}
+
+
+%% end of file `template.tex'.
+

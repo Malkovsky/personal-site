@@ -5,8 +5,8 @@ project:
 website:
   title: "Your Name"
   description: "Personal website and blog"
-  site-url: https://yourwebsite.com
-  repo-url: https://github.com/yourusername/blog
+  site-url: https://malkovsky.github.io/personal-site/ru
+  repo-url: https://github.com/Malkovsky/personal-site
   repo-actions: [edit, issue]
   
   navbar:
@@ -27,12 +27,10 @@ website:
         href: resume.qmd
       - text: "Contact"
         href: contact.qmd
-    
+
     right:
       - icon: github
-        href: https://github.com/yourusername
-      - icon: twitter
-        href: https://twitter.com/yourusername
+        href: https://github.com/Malkovsky
       - icon: linkedin
         href: https://linkedin.com/in/yourusername
   
@@ -41,11 +39,9 @@ website:
       Copyright © 2026 Your Name
     right:
       - icon: github
-        href: https://github.com/yourusername
-      - icon: twitter  
-        href: https://twitter.com/yourusername
+        href: https://github.com/Malkovsky
       - icon: envelope
-        href: mailto:your.email@example.com
+        href: mailto:malkovskynv@gmail.com
 
 format:
   html:

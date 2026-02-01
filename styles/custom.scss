@@ -46,8 +46,19 @@ $spacer: 1rem;
 .profile-photo {
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 2rem auto;
+  float: left;
+  margin: 0.5rem 1.5rem 1rem 0;
   display: block;
+  shape-outside: circle(50%);
+  shape-margin: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .profile-photo {
+    float: none;
+    margin: 1rem auto 1.5rem;
+    display: block;
+  }
 }
 
 // Project cards
@@ -162,6 +173,16 @@ code {
   }
 }
 
+// Title block banner styling
+.quarto-title-block .quarto-title-banner {
+  background: #C73E1D;
+  color: #fff;
+}
+
+.quarto-title-block .quarto-title-banner a {
+  color: #fff;
+}
+
 // Footer styling
 .nav-footer {
   border-top: 1px solid #e0e0e0;
@@ -186,6 +207,43 @@ a {
     color: darken($primary, 10%);
   }
 }
+
+// Brand icon colors (Font Awesome uses SVG or webfont; set both color and fill)
+.fa-github,
+.fa-brands.fa-github,
+.svg-inline--fa.fa-github {
+  color: #181717 !important;
+  fill: #181717;
+}
+
+.fa-linkedin,
+.fa-brands.fa-linkedin,
+.svg-inline--fa.fa-linkedin {
+  color: #0A66C2 !important;
+  fill: #0A66C2;
+}
+
+.fa-twitter,
+.fa-brands.fa-twitter,
+.svg-inline--fa.fa-twitter {
+  color: #1DA1F2 !important;
+  fill: #1DA1F2;
+}
+
+.fa-telegram,
+.fa-brands.fa-telegram,
+.svg-inline--fa.fa-telegram {
+  color: #229ED9 !important;
+  fill: #229ED9;
+}
+
+.fa-envelope,
+.fa-solid.fa-envelope,
+.svg-inline--fa.fa-envelope {
+  color: #D14836 !important;
+  fill: #D14836;
+}
+
 
 // Button styling
 .btn-primary {

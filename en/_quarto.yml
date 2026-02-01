@@ -3,7 +3,7 @@ project:
   output-dir: ../_site/en
 
 website:
-  title: "Your Name"
+  title: "Nikolay Malkovsky"
   description: "Personal website and blog"
   site-url: https://malkovsky.github.io/personal-site/en
   repo-url: https://github.com/Malkovsky/personal-site
@@ -21,9 +21,9 @@ website:
         href: blog/index.qmd
       - text: "Projects"
         href: projects/index.qmd
-      - text: "Publications"
-        href: publications.qmd
-      - text: "Resume"
+      # - text: "Publications"
+      #   href: publications.qmd
+      - text: "CV"
         href: resume.qmd
       - text: "Contact"
         href: contact.qmd
@@ -33,25 +33,23 @@ website:
         href: ../ru/index.html
         aria-label: "Switch to Russian"
       - icon: github
-        href: https://github.com/yourusername
+        href: https://github.com/Malkovsky
         aria-label: "GitHub"
-      - icon: twitter
-        href: https://twitter.com/yourusername
-        aria-label: "Twitter"
       - icon: linkedin
-        href: https://linkedin.com/in/yourusername
+        href: https://linkedin.com/in/nikolay-malkovsky-a5479b140
         aria-label: "LinkedIn"
+      - text: "![](https://habrastorage.org/getpro/habr/company/7e4/7b8/e31/7e47b8e31d0efe9f398461278a16a357.png){width=20px}"
+        href: https://habr.com/ru/users/malkovsky/
+        aria-label: "Habr"
   
   page-footer:
     left: |
       Copyright © 2026 Your Name
     right:
       - icon: github
-        href: https://github.com/yourusername
-      - icon: twitter  
-        href: https://twitter.com/yourusername
+        href: https://github.com/Malkovsky
       - icon: envelope
-        href: mailto:your.email@example.com
+        href: mailto:malkovskynv@gmail.com
 
 format:
   html:

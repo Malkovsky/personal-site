@@ -1,30 +1,25 @@
 ---
 title: "About Me"
-subtitle: "Get to know me better"
+# subtitle: "Get to know me better"
 page-layout: article
 title-block-banner: true
 ---
 
-![Replace with your profile photo](images/profile.jpg){.profile-photo fig-align="center" width="250px"}
+## Very short
 
-## Hi, I'm [Your Name]
+::: {style="float: right; margin: 10px;"}
+![](../images/profile.jpg){.profile-photo fig-align="center" width="250px"}
+:::
 
-I'm a [your profession/role] based in [your location]. With [X] years of experience in [your field], I specialize in [your specialties].
+I'm a principal engineer at Chebyshev Research Center at Saint-Petersburg (not to be confused with the SPbSU Chebyshev laboratory, also at Saint-Petersburg) with over 10 years of experience in applied computer science. I specialize in scientific computing where I have a broad theoretical knowledge and project in several fields: ASR systems, application level forward error correction, succinct data structures.
 
-### What I Do
+### What I do for living
 
-I focus on [main areas of work]:
+Throughout my career I worked on real time systems that demand highly optimized software, here's the outline of my projects  
 
-- **Data Science & Analytics** - Building predictive models and extracting insights from complex datasets
-- **Software Development** - Creating scalable applications and tools
-- **Research** - Exploring [your research interests]
-- **Writing & Teaching** - Sharing knowledge through blog posts and tutorials
-
-### My Journey
-
-My journey into [your field] started when [brief story about how you got started]. Since then, I've worked on [types of projects] and collaborated with [types of organizations/people].
-
-Currently, I'm [what you're doing now - studying, working at X, freelancing, etc.].
+- **ASR Systems** - R&D for HMM-DNN hybrid systems, end-to-end ASR, and transformer-based solutions
+- **Network Protocols** - Improving QUIC protocol for file transfer and real-time communication via congestion control algorithms
+- **Coding Theory** - Forward error correction codes and their applications to real-time communication data transfer
 
 ### Skills & Expertise
 
@@ -32,68 +27,51 @@ Currently, I'm [what you're doing now - studying, working at X, freelancing, etc
 
 ::: {.g-col-12 .g-col-md-6}
 #### Programming Languages
-- Python
-- R
-- JavaScript/TypeScript
-- SQL
+- C/C++ (Expert)
+- Python (Fluent)
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-#### Tools & Technologies
-- Jupyter/Quarto
-- Git/GitHub
-- Docker
-- Cloud platforms (AWS/GCP/Azure)
+#### Core Expertise
+- Algorithmic optimization
+- Finite automata & graph algorithms
+- Coding theory & finite fields
+- Hardware-aware optimization
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-#### Data Science
-- Machine Learning
-- Statistical Analysis
-- Data Visualization
-- Deep Learning
-:::
-
-::: {.g-col-12 .g-col-md-6}
-#### Soft Skills
-- Technical Writing
-- Project Management
-- Communication
-- Problem Solving
+#### ASR & ML Frameworks
+- Kaldi
+- DeepSpeech
+- Nemo
+- PyTorch
 :::
 
 :::
 
-### Education
+### Education and career
 
-**[Degree Name]** - [University Name]  
-[Year] | [Major/Specialization]
+I graduated from Saint Petersburg State University (2008-2013) and defended my PhD thesis (2017) under the supervision of Professor Oleg Granichin. My research focused on scheduling problems in distributed systems and algorithms for solving some specific tasks.
 
-**[Another Degree]** - [Institution]  
-[Year] | [Major/Specialization]
+Since then, I have worked on a variety of projects, from speech recognition systems at STC-innovations and TCS group, to backend development at Yandex.Market, and currently leading advanced R&D projects at Chebyshev Research Center.
 
-### Interests
+### Languages
 
-When I'm not coding or analyzing data, I enjoy:
-
-- 📚 Reading [genres you like]
-- 🎮 Gaming
-- 🏃 Fitness and outdoor activities
-- 🎵 Music
-- ✈️ Travel
+- 🇷🇺 Russian - Native
+- 🇬🇧 English - Fluent
 
 ### Let's Connect
 
 I'm always open to interesting conversations and collaboration opportunities. Feel free to reach out!
 
-- **Email** - [your.email@example.com](mailto:your.email@example.com)
-- **GitHub** - [@yourusername](https://github.com/yourusername)
-- **LinkedIn** - [Your Name](https://linkedin.com/in/yourusername)
-- **Twitter** - [@yourusername](https://twitter.com/yourusername)
+- **Email** - [malkovskynv@gmail.com](mailto:malkovskynv@gmail.com)
+- **GitHub** - [@Malkovsky](https://github.com/Malkovsky)
+- **Habr** - [malkovsky](https://habr.com/ru/users/malkovsky)
+- **Telegram** - [@malkovskynv](https://t.me/malkovskynv)
 
 ---
 
 ::: {.callout-note}
-## Looking for my resume?
-You can find a detailed version of my professional experience on the [Resume](resume.qmd) page or download a PDF copy.
+## Looking for my CV?
+You can find a detailed version of my professional experience on the [CV](resume.qmd) page or download a PDF copy.
 :::

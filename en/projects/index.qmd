@@ -1,113 +1,49 @@
 ---
-title: "Projects"
-subtitle: "A showcase of my work"
+title: "Pet Projects"
+# subtitle: "A showcase of my work"
 page-layout: full
 title-block-banner: true
 ---
-
-Here are some of the projects I've worked on. Each represents a unique challenge and learning opportunity.
 
 ## Featured Projects
 
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6 .project-card}
-### 🚀 Project Alpha
+### Interactive Visualization
 
-A machine learning platform for automated data analysis and visualization. Built to help analysts quickly explore datasets and generate insights.
+Interactive algorithm visualizations in Python. Recommended for educational purposes, not ideal for complex visualizations.
 
-**Technologies** - Python, FastAPI, React, PostgreSQL, Docker
+![](https://raw.githubusercontent.com/Malkovsky/interactive-visualization/master/images/em_gmm.gif)
 
-**Key Features:**
-
-- Automated EDA (Exploratory Data Analysis)
-- Interactive visualizations
-- RESTful API
-- Real-time data processing
-
-- [GitHub](https://github.com/yourusername/project-alpha) 
-- [Demo](https://project-alpha-demo.com) 
-- [Documentation](https://docs.project-alpha.com)
+- [GitHub](https://github.com/Malkovsky/interactive-visualization)
 
 :::
 
 ::: {.g-col-12 .g-col-md-6 .project-card}
-### 📊 Data Viz Dashboard
+### QR Verbose
 
-An interactive dashboard for analyzing and visualizing business metrics. Supports multiple data sources and real-time updates.
+A utility and library for advanced QR code generation with verbose diagnostics. Intended primarily for educational purposes — if you want to understand how a QR code works, this tool is a good place to start.
 
-**Technologies** - JavaScript, D3.js, Node.js, MongoDB
+![](https://malkovskynv.sourcecraft.site/qr-verbose/images/colors_and_numbers.png)
 
-**Key Features:**
-
-- Real-time data streaming
-- Customizable widgets
-- Export to PDF/PNG
-- Multi-user collaboration
-
-- [GitHub](https://github.com/yourusername/viz-dashboard) 
-- [Demo](https://viz-dashboard-demo.com)
+- [Sourcecraft](https://sourcecraft.dev/malkovskynv/qr-verbose)
+- [Documentation](https://malkovskynv.sourcecraft.site/qr-verbose/)
+- [Habr Article](https://habr.com/ru/articles/981968/)
 
 :::
 
 ::: {.g-col-12 .g-col-md-6 .project-card}
-### 🤖 ML Model Toolkit
+### Pixie
 
-A comprehensive toolkit for training, evaluating, and deploying machine learning models. Includes pre-built pipelines for common tasks.
+A library for succinct data structures. As a showcase example, the LOUDS suspended tree implementation uses 2 bits per node and supports DFS/BFS faster than a traditional implementation using two pointers per node.
 
-**Technologies** - Python, scikit-learn, TensorFlow, MLflow
+![](https://habrastorage.org/r/w1560/getpro/habr/upload_files/55b/066/bb0/55b066bb0b223ac85174007ce098be92.png)
 
-**Key Features:**
-
-- Model versioning
-- Automated hyperparameter tuning
-- Performance monitoring
-- One-click deployment
-
-- [GitHub](https://github.com/yourusername/ml-toolkit) 
-- [Documentation](https://ml-toolkit-docs.com)
+- [GitHub](https://github.com/Malkovsky/pixie)
+- [Documentation](https://malkovsky.github.io/pixie/)
 
 :::
-
-::: {.g-col-12 .g-col-md-6 .project-card}
-### 📝 Markdown Blog Engine
-
-A lightweight, static site generator optimized for technical blogs. Supports Jupyter notebooks, math equations, and code highlighting.
-
-**Technologies** - JavaScript, Quarto, GitHub Actions
-
-**Key Features:**
-
-- Jupyter notebook integration
-- Automatic deployment
-- SEO optimized
-- Responsive design
-
-- [GitHub](https://github.com/yourusername/blog-engine) 
-- [Demo](https://blog-engine-demo.com)
-
-:::
-
-:::
-
-## Open Source Contributions
-
-I actively contribute to open source projects:
-
-- **[Project Name]** - [Brief description of contribution]
-- **[Another Project]** - [What you contributed]
-- **[Library/Tool]** - [Your involvement]
-
-## Archived Projects
-
-::: {.callout-note collapse="true"}
-## View Older Projects
-
-### Legacy Data Pipeline
-A data ETL pipeline built with Apache Airflow. [View on GitHub](https://github.com/yourusername/legacy-pipeline)
-
-### Web Scraper Collection
-Collection of web scrapers for various data sources. [View on GitHub](https://github.com/yourusername/scrapers)
 
 :::
 

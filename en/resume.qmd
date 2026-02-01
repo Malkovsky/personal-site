@@ -1,73 +1,81 @@
 ---
-title: "Resume"
-subtitle: "Professional Experience & Education"
+title: "Curriculum Vitae"
+# subtitle: "Professional Experience & Education"
 page-layout: article
 title-block-banner: true
 format:
   html:
     toc: true
-  pdf:
-    toc: false
+  # pdf:
+  #   toc: false
 ---
 
 ::: {.callout-note}
 ## Download PDF
-[Download Resume as PDF](resume.pdf){.btn .btn-primary}
+[Download Resume as PDF](cv.pdf){.btn .btn-primary}
 :::
 
 ## Professional Experience
 
-### Senior Data Scientist
-**Company Name** | *City, Country* | Jan 2023 - Present
+### Principal Researcher
+**Huawei, 2012 Laboratories** | *St. Petersburg, Russia* | 2023 - Present
 
-- Led a team of 3 data scientists in developing machine learning models for customer churn prediction, achieving 85% accuracy
-- Designed and implemented end-to-end data pipelines processing 10M+ records daily
-- Collaborated with product teams to integrate ML models into production systems
-- Mentored junior data scientists and conducted technical workshops
+- Improvement of QUIC protocol for file transfer and real-time communication scenarios via congestion control algorithms
+- Techlead of the R&D project on forward error correction codes and their applications to real-time communication data transfer
+- Author of [TechArena 2025 SPbSU challenge](https://codeforces.com/gym/106111)
 
-**Key Technologies** - Python, TensorFlow, PyTorch, SQL, AWS, Docker
-
----
-
-### Data Scientist
-**Another Company** | *City, Country* | Jun 2020 - Dec 2022
-
-- Built recommendation systems serving 500K+ daily active users
-- Developed automated reporting dashboards reducing analysis time by 60%
-- Conducted A/B tests to optimize user engagement metrics
-- Published findings in company tech blog and presented at internal conferences
-
-**Key Technologies** - Python, scikit-learn, Apache Spark, PostgreSQL, Tableau
+**Key Technologies** - C/C++, Network protocols, Coding theory, SIMD optimization
 
 ---
 
-### Junior Data Analyst
-**First Company** | *City, Country* | Jan 2019 - May 2020
+### Developer
+**Yandex, Yandex Market** | *Russia* | 2022 - 2023
 
-- Performed statistical analysis on customer behavior data
-- Created interactive visualizations for stakeholder presentations
-- Automated data collection and cleaning processes
-- Assisted in developing predictive models for sales forecasting
+- Backend development for Yandex Market platform
 
-**Key Technologies** - Python, R, SQL, Excel, Power BI
+---
+
+### Sr. Researcher
+**TCS Group, AI Department** | *Russia* | 2021 - 2022
+
+- Transformer-based zero-shot text cleaning
+- R&D for core parts for CTC end-to-end ASR systems, WFST-based context biasing for end-to-end
+
+**Key Technologies** - Python, PyTorch, ASR
+
+---
+
+### Researcher/Sr. Researcher
+**STC-innovations, Research Department** | *Russia* | 2018 - 2021
+
+- R&D of HMM part of hybrid HMM-DNN ASR systems
+- Finite automata based solutions: word bounds extraction, algorithms for low latency streaming recognition, algorithms for vocabulary expansion
+- Lattice generation and conversion to confusion network, lattice rescoring with RNN language models
+
+**Key Technologies** - C/C++, Kaldi, OpenFST
+
+---
+
+### Assistant Professor
+**St. Petersburg State University & Higher School of Economics** | *St. Petersburg, Russia* | 2017 - 2022
+
+- Taught [course on convex optimization](https://nbviewer.jupyter.org/github/Malkovsky/python-examples/tree/master/optimization_course/) (in Russian)
+- Mentored students in algorithmic and optimization topics
 
 ---
 
 ## Education
 
-### Master of Science in Data Science
-**University Name** | *City, Country* | 2017 - 2019
+### Ph.D. in Computer Science (Candidate of Science)
+**St. Petersburg State University** | *St. Petersburg, Russia* | 2013 - 2017
 
-- **Thesis** - "Deep Learning Approaches for Time Series Forecasting"
-- **GPA** - 3.9/4.0
-- **Relevant Coursework** - Machine Learning, Statistical Modeling, Big Data Analytics, Neural Networks
+- **Ph.D. Thesis** - "Randomized resource distribution algorithms in multiagent systems"
+- **Supervisor** - Prof. Oleg Granichin
 
-### Bachelor of Science in Computer Science
-**University Name** | *City, Country* | 2013 - 2017
+### Master's Degree
+**St. Petersburg State University** | *St. Petersburg, Russia* | 2008 - 2013
 
-- **GPA** - 3.7/4.0
-- **Honors** - Dean's List (2015-2017)
-- **Relevant Coursework** - Data Structures, Algorithms, Database Systems, AI
+- **GPA** - 4.5/5.0
 
 ---
 
@@ -79,97 +87,59 @@ format:
 
 ::: {.g-col-12 .g-col-md-6}
 **Programming Languages**
-- Python (Expert)
-- R (Advanced)
-- SQL (Advanced)
-- JavaScript (Intermediate)
-- Julia (Intermediate)
+- C/C++ (Expert)
+- Python (Advanced)
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-**ML/AI Frameworks**
-- TensorFlow
-- PyTorch
+**Algorithmic Skills**
+- Mathematical optimization
+- Graph/finite automata algorithms
+- Finite field computations
+- Coding theory
+- Succinct data structures
+- Hardware-aware optimization
+:::
+
+::: {.g-col-12 .g-col-md-6}
+**Python Stack**
+- NumPy, SciPy
 - scikit-learn
-- Keras
-- XGBoost
+- Matplotlib
+- PyTorch/TorchScript
+- Jupyter
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-**Data Tools**
-- Jupyter/Quarto
-- Apache Spark
-- Pandas, NumPy
-- Matplotlib, Seaborn
-- Tableau, Power BI
+**ASR Frameworks**
+- Kaldi
+- DeepSpeech
+- Nemo
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-**Cloud & DevOps**
-- AWS (EC2, S3, SageMaker)
-- Docker & Kubernetes
-- Git/GitHub
-- CI/CD pipelines
+**Mathematical areas**
+- Convex optimization
+- Advanced graph algorithms 
+- Finite fields computations
 :::
 
 :::
 
-### Soft Skills
+### Leadership & Soft Skills
 
-- Technical Writing & Documentation
-- Team Leadership & Mentoring
-- Cross-functional Collaboration
-- Presentation & Communication
-- Project Management
+- **Technical Leadership** - Leading algorithmically skilled teams, including IOI gold medalists
+- **Project Management** - Organizing clear workflows for development teams
+- **Teaching & Mentoring** - Assistant professor experience, student supervision
+- **Code Quality** - Maintaining medium C/C++ codebases (~10⁵)
 
----
-
-## Certifications
-
-- **AWS Certified Machine Learning - Specialty** | Amazon Web Services | 2023
-- **TensorFlow Developer Certificate** | Google | 2022
-- **Professional Data Scientist** | DataCamp | 2021
-
----
-
-## Publications & Talks
-
-### Conference Presentations
-
-- "Scaling ML Models in Production" - PyData Conference 2023
-- "Best Practices for MLOps" - Data Science Summit 2022
-
-### Blog Posts
-
-- ["Building Production-Ready ML Pipelines"](blog/index.qmd) - Technical Blog, 2023
-- ["Introduction to Deep Learning"](blog/index.qmd) - Medium, 2022
-
-See [Publications](publications.qmd) page for a complete list.
-
----
-
-## Awards & Achievements
-
-- **Employee of the Year** - Company Name, 2023
-- **Best Presentation Award** - Internal Data Science Conference, 2022
-- **Hackathon Winner** - Company Innovation Challenge, 2021
 
 ---
 
 ## Languages
 
-- **English** - Native/Fluent
-- **[Other Language]** - Professional Working Proficiency
-- **[Another Language]** - Limited Working Proficiency
-
----
-
-## Volunteer Work
-
-### Data Science Mentor
-**Non-Profit Organization** | 2021 - Present
-
-Mentoring aspiring data scientists from underrepresented backgrounds, providing career guidance and technical support.
+- **Russian** - Native
+- **English** - Fluent
 
 ---
 
