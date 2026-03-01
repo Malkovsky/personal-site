@@ -1,6 +1,6 @@
 ---
 title: "How math changed origami and origami changed our lives"
-description: "A draft about Robert J. Lang: from NASA engineering to revolutionizing modern origami with mathematics, and why that matters in space and medicine."
+description: "I want to tell you an amazing story about Robert Lang — a man who left a prestigious job at NASA to devote himself entirely to the pursuit that made life a little better for all of us: origami."
 author: "Nikolay Malkovsky"
 date: "2026-02-28"
 categories: [science, art, engineering]
