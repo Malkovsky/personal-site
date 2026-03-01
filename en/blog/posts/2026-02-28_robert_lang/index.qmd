@@ -10,7 +10,7 @@ draft: false
 
 ![](images/robert_lang.png)
 
-> "The secret to productivity in so many fields is dead people do your work for you."
+> "The secret to productivity in so many fields is letting dead people do your work for you."
 >
 > -- Robert Lang
 
