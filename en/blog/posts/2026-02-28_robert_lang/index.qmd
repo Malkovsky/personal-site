@@ -1,0 +1,122 @@
+---
+title: "How math changed origami and origami changed our lives"
+description: "A draft about Robert J. Lang: from NASA engineering to revolutionizing modern origami with mathematics, and why that matters in space and medicine."
+author: "Nikolay Malkovsky"
+date: "2026-02-28"
+categories: [science, art, engineering]
+image: "thumbnail.png"
+draft: false
+---
+
+![](images/robert_lang.png)
+
+> "The secret to productivity in so many fields is dead people do your work for you."
+>
+> -- Robert Lang
+
+I want to tell you an amazing story about Robert Lang. From the epigraph it may sound like he took inspiration from Chichikov and his schemes, but no: Lang is the complete opposite -- a mathematician and an engineer. He did not solve a single famous math problem like Andrew Wiles or Grigori Perelman, but his contribution is genuinely remarkable. After 14 years at NASA, he decided to devote all of his time to a long-standing passion: origami.
+
+Sounds like a questionable career decision, you might say. But this is where it gets interesting: not only did Robert spark a revolution in origami by bringing in a new tool -- mathematics -- he also found many practical applications of origami in fields such as space engineering, robotics, and medicine.
+
+## Short biography
+
+![Robert Lang; unfortunately I couldn't find a good photo of him when he was young](images/robertlang-hr.jpg){style="float: right; margin: 0 0 1em 1em; width: 30%;"}
+
+Robert J. Lang was born in 1961 in Dayton, Ohio. By training he is a physicist: he received an M.S. in electrical engineering from Stanford (1983) and a PhD in applied physics from Caltech (1986). His academic interests were in optoelectronics and the physics of semiconductor lasers -- the kind of technology that usually stays "behind the scenes" of everyday electronics.
+
+After university, Lang worked for many years as an engineer and researcher at NASA's Jet Propulsion Laboratory, spending nearly a decade and a half on applied physics.
+
+In parallel with his main work, he practiced origami. It is hard to call it a hobby: it was not mere entertainment but a real passion. During his years at NASA he began experimenting with using mathematics in origami.
+
+![After earning his degree, Robert worked for 14 years](images/Jet_Propulsion_Laboratory_sign.jpg)
+
+## Two papers in the 1990s
+
+If you look at Robert's [publication list](https://scholar.google.com/citations?hl=ru&user=IOViVc4AAAAJ&view_op=list_works&sortby=pubdate), you will find many papers on semiconductor laser physics, several of them highly cited. Among them are two modest origami papers that changed the field:
+
+- [Mathematical algorithms for origami design, 1994](https://brown.symmetry-us.com/Journals/5-2/lang.pdf)
+- [A computational algorithm for origami design, 1996](https://dl.acm.org/doi/pdf/10.1145/237218.237249)
+
+These papers describe essentially the same method. To understand what is revolutionary about it, we need a bit of context: how origami design works and what the state of the art looked like in the 1990s.
+
+![Akira Yoshizawa](images/yoshizava.jpg){style="float: right; margin: 0 0 1em 1em; width: 40%;"}
+
+![A typical example from Yoshizawa's books](images/origami_instructions.jpg){style="float: left; margin: 1em 1em 0 0; width: 55%;"}
+
+In many of his talks, Robert mentions Akira Yoshizawa as one of the key origami masters of the 20th century. Yoshizawa created models of astonishing complexity, but his main achievement is considered to be the creation of a universal language for describing folds. As this notation evolved, the origami community arrived at the idea of a "crease pattern" -- imagine you fold a model, then unfold it back into a flat sheet and trace all the creases. That drawing is the crease pattern.
+
+![A crease pattern and the origami girl that comes from it](images/crease_pattern_girl.jpg)
+
+For an experienced folder, a crease pattern contains essentially all necessary information. Around this point in our story, Robert shows up. One question he studied was whether it is possible to generate a crease pattern automatically from a more human-friendly representation. He focused on the "stick figure" format and often used the following comparison: it is not too hard to create a stick figure, and it is not too hard to fold from a crease pattern, but producing a crease pattern from a stick figure is not a simple task.
+
+![](images/four_steps.jpg)
+
+Studying the correspondence between crease patterns and stick figures, he arrived at the idea that each segment (each "stick") corresponds to a circle (or part of a circle) in the crease pattern.
+
+![](images/origami_circle_2.jpg){style="float: right; margin: 0 0 1em 1em; width: 40%;"}
+
+![Figures from Robert's papers](images/origami_circle_1.jpg){style="float: left; margin: 1em 1em 0 0; width: 55%;"}
+
+One of the drawings in the original paper shows a nice example of how four quarter-circles become the head, tail, and two wings of the traditional origami crane. This leads to a simple but brilliant principle: to "pack" a stick figure onto a square sheet of paper, you need to place a set of circles on it -- the rest is technique. As Robert puts it: "This is where the dead will help us." The point is that mathematics has long studied how to arrange circles on a plane in various ways.
+
+Generally speaking, the problem "Given several circles with different radii and a square, can you fit the circles into the square without overlap?" is NP-hard. But the particular instance that arises when constructing a crease pattern is simpler and can be solved using standard convex optimization methods.
+
+![](images/deer_crease_pattern.jpg){style="float: left; margin: 1em 1em 0 0; width: 52%;"}
+
+![](images/deer.jpg){style="float: right; margin: 1em 1em 0 0; width: 43%;"}
+
+In practice, this means you can make almost anything out of paper. A quick way to get a feel for it is to browse Robert's [gallery](https://langorigami.com/artworks/).
+
+![](images/organ.jpg){style="float: left; margin: 1em 1em 1em 0; width: 55%;"}
+
+![](images/beetle.jpg){style="float: right; margin: 1em 1em 8em 0; width: 40%;"}
+
+---
+
+## Origami in real life
+
+![](images/Miura-ori.gif){style="float: left; margin: 0 1em 1em 0; width: 60%;"}
+
+![](images/foldable_solar_array.gif){style="float: right; margin: 0 0 1em 1em; width: 35%;"}
+
+Robert's work pushed origami forward dramatically, but still: what does it have to do with industry, space, and medicine? It turns out that the ability to fold something compactly and then deploy it back is extremely useful in practice, and origami provides concrete mechanisms for doing exactly that.
+
+Back in 1970, astrophysicist Koryo Miura created a folding pattern now known as Miura-ori, applicable not only to soft materials like paper, but also to rigid sheets -- as long as the structure is flexible along the creases. In 1996, this pattern was first used to deploy a solar panel in orbit. Later it was adapted into a "circular" variant where the panel folds into a belt around the rocket; today such designs are widely used.
+
+!["Eyeglass" telescope prototype](images/lang_telescope.jpg){style="float: right; margin: 0 0 1em 1em; width: 35%;"}
+
+There is another space component that, in its working state, is essentially a large flat surface: a lens. The motivation is straightforward: the larger the lens we can launch, the deeper into space we can see. In 2015, Robert worked on a foldable lens prototype at Lawrence Livermore National Laboratory. I may be mistaken -- I could not find reliable information about what happened to that specific prototype -- but a similar concept was eventually used on the James Webb telescope.
+
+> Such a telescope has two directions it can point: it can look up; and it can look down. Those who were interested in the "looking down" versions certainly wouldn't tell the local origami consultant about any further collaboration. But the next time you look at the night sky, if you notice a twinkle that seems not quite where it should be, look carefully: it might be a little piece of origami looking back at you!
+>
+> -- Robert Lang
+
+In space engineering, the problem is getting something big into orbit; in medicine, it turned out to be useful to get something small into the body. There is a procedure called stenting (hopefully you will never need it in real life), whose essence is introducing a so-called stent -- a hollow tube that artificially expands a narrowed section of an organ (for example, an artery, the esophagus, and others). For such a procedure it is desirable for the stent to occupy as little volume as possible during delivery, and then expand to its working size once placed.
+
+![](images/foldable_tube.jpg){style="float: left; margin: 0 1em 1em 0; width: 30%;"}
+
+In 2003, two researchers at the University of Oxford, Zhong You and Kaori Kuribayashi, presented such a foldable stent design. As a basis for the structure -- potentially life-saving for many people -- they used an origami model familiar to many from childhood: the waterbomb base.
+
+Strangely enough, humans are not the only ones who "invented" compact folding of flat things. It is no surprise that many origami artists have drawn inspiration from insects.
+
+<!--
+![](images/butterfly.gif){style="float: left; margin: 1em 0 1em 0; width: 30%;"}
+
+![](images/lady_bug.gif){style="float: right; margin: 1em 0 6em 0; width: 65%;"}
+-->
+
+![](images/butterfly.gif){style="margin: 2em 0 1em 0; width: 30%;"}
+![](images/lady_bug.gif){style="margin: 1em 0 6em 0; width: 65%;"}
+
+## Instead of a conclusion
+
+Today, Robert continues to do origami "full-time", although it is clear that he never truly left engineering behind. For him, the worlds of origami and engineering are tightly intertwined. After "ending" his NASA career, he continued to contribute to space engineering through origami, and his expertise in laser optics helps him do delicate work that is impossible by hand (many of his works are marked with a special laser printer).
+
+If you enjoyed this article, I strongly recommend watching Robert's talks about origami and its applications: he explains what he did far better than I can. Links are below.
+
+## Useful links
+
+- [Robert Lang TED talk (EN)](https://www.youtube.com/watch?v=NYKcOFQCeno)
+- [Engineering with Origami [Veritasium]](https://www.youtube.com/watch?v=ThwuT3_AG6w)
+- [Robert Lang's website](https://langorigami.com/)
+- [TreeMaker -- software for building a crease pattern from a stick figure](https://langorigami.com/article/treemaker/)
