@@ -103,7 +103,7 @@ When, for example, you perform a linear scan of an array with some processing ov
 
 ## Address alignment
 
-A few more details should be given about CPU-cache-RAM interaction. The basic unit a cache operates on is a *cache line*, which is a 64-byte block on most CPUs. Software can issue unaligned accesses, but caches and memory subsystems still operate on aligned cache lines internally. When particular data is requested from RAM, all corresponding cache lines containing that data are loaded. There is a small problem with this approach: suppose that you have an array of objects and you want to process them in batches using SIMD instructions. Let us say that we use 512-bit AVX-512 instructions and the cache-line size is also 512 bits. If the beginning of the array is aligned with the beginning of a cache-line block, then processing a single batch may require a single cache-line load/store plus the corresponding processing. If the array is not aligned, however, the operation may need two loads/stores instead. This would not necessarily be a problem during a linear scan, but if the access is isolated, it might lead to significant performance degradation.
+A few more details should be given about CPU-cache-RAM interaction. The basic unit a cache operates on is a *cache line*, which is a 64-byte block on most CPUs. Caches and memory subsystems operate on *aligned cache lines* internally, i.e. RAM is virtually divided into blocks of the same size as cache line, when you request an arbitrary block from the RAM it will load all the cache line blocks that are responsible for data of the requested block. There is a small problem with this approach: suppose that you have an array of objects and you want to process them in batches using SIMD instructions. Let us say that we use 512-bit AVX-512 instructions and the cache-line size is also 512 bits. If the beginning of the array is aligned with the beginning of a cache-line block, then processing a single batch may require a single cache-line load/store plus the corresponding processing. If the array is not aligned, however, the operation may need two loads/stores instead. This would not necessarily be a problem during a linear scan, but if the access is isolated, it might lead to significant performance degradation.
 
 To guarantee address alignment, C++17 provides the `std::aligned_alloc` allocation function, parameterized by the alignment requirement, and the `alignas(...)` specifier.
 
@@ -210,12 +210,38 @@ For more details on SIMD, check the [Intel](https://www.intel.com/content/www/us
 
 The branching problem is universal for any kind of pipelined or parallel execution. If you know in advance what you will do next, there is an opportunity for optimization, but if at some point you need the current state and have to decide what to do next based on that state, you lose the opportunity to plan ahead. Unfortunately, this is also true for CPUs. In some situations, branchless code can be more efficient than an explicit branch, but that depends heavily on the data, the compiler, and the target microarchitecture. For example, code like
 ```cpp
-c = condition ? if_expression : else_expression;
+result = condition * if_expression + !condition * else_expression;
 ```
-or fully branchless variants may sometimes outperform a traditional `if`, but this should be verified with benchmarks rather than treated as a universal rule.
+which always evaluates `if_expression` and `else_expression` may outperform a traditional `if`
+```cpp
+if (condition)
+  result = if_expression;
+else
+  result = else_expression;
+```
+where only one of the expressions is evaluated.
 
 In any case, avoid unnecessary branching in performance-critical code. C++20 provides the attributes `[[likely]]` and `[[unlikely]]`, by which the developer can hint to the compiler about the expected branch probability. These attributes are just hints, not guarantees of a particular execution strategy.
 
 ## Arithmetics
 
 The situations where you need to optimize arithmetic computations are relatively rare. If you end up in such a situation, there is not much I can help you with beyond recommending [godbolt.org](godbolt.org), which is one of the most useful tools here. Also be aware of what the processor provides, because there is much more than just standard integer and boolean arithmetic, for example BMI/BMI2 (bit manipulation), FMA (fused multiply-add), AES (Advanced Encryption Standard), CLMUL (carry-less multiplication), GFNI (Galois field new instructions), and others.
+
+# References
+
+- Donald E. Knuth, “Structured Programming with go to Statements”, *ACM Computing Surveys*, 6(4), 1974.
+- Scott Meyers, *Effective Modern C++*, O'Reilly Media, 2015.
+- Ulrich Drepper, [What Every Programmer Should Know About Memory](http://codelabs.ru/reading/drepper-wepskam.pdf).
+- [Google Benchmark](https://github.com/google/benchmark)
+- [ankerl::nanobench](https://github.com/martinus/nanobench)
+- [Catch2](https://github.com/catchorg/Catch2)
+- [Intel Intrinsics Guide](https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html)
+- [ARM Intrinsics Search Engine](https://developer.arm.com/architectures/instruction-sets/intrinsics/)
+- [simdjson](https://github.com/simdjson/simdjson)
+- [GCC libstdc++ `basic_string` implementation](https://github.com/gcc-mirror/gcc/blob/master/libstdc%2B%2B-v3/include/bits/basic_string.tcc)
+- [LLVM libc++ `string` implementation](https://github.com/llvm/llvm-project/blob/main/libcxx/include/string)
+- [cppreference: `std::boyer_moore_searcher`](https://en.cppreference.com/w/cpp/utility/functional/boyer_moore_searcher.html)
+- [Wikipedia: Galactic algorithm](https://en.wikipedia.org/wiki/Galactic_algorithm)
+- [Wikipedia: Knuth-Morris-Pratt algorithm](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)
+- [Wikipedia: AlphaDev](https://en.wikipedia.org/wiki/AlphaDev#LLVM_standard_sorting_library)
+- [How to Multiply Matrices Fast](https://www.youtube.com/watch?v=GHctcSBd6Z4)
