@@ -29,14 +29,16 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     container:
-        image: ghcr.io/quarto-dev/quarto:latest
+      image: ghcr.io/quarto-dev/quarto:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build site
-        run: | 
-            quarto install --no-prompt tinytex
-            bash build.sh
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends xz-utils
+          quarto install --no-prompt tinytex
+          bash build.sh
       - name: Publish pages
         uses: actions/upload-pages-artifact@v3
         with:
