@@ -4,7 +4,7 @@ description: "Эта заметка вдохновлена статьей [Я з
 author: "Николай Мальковский"
 date: "2026-04-10"
 categories: [Python, AI, Terminal, Tools]
-image: "images/sem.png"
+image: "images/thumbnail.png"
 draft: false
 ---
 
