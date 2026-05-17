@@ -1,9 +1,15 @@
-# Quarto
-*.quarto/
-*.freeze/
-/_site/
-/_book/
-/_manuscript/
+# Quarto build artifacts
+_site/
+_book/
+_manuscript/
+_freeze/
+**/_freeze/
+.quarto/
+**/.quarto/
+**/_extensions/
+*.quarto_ipynb
+**/*_files/
+**/.jupyter_cache/
 
 # R
 .Rproj.user
@@ -65,11 +71,3 @@ node_modules/
 # Cache
 .cache/
 *.cache
-
-# Freeze directory for computational content
-/_freeze/
-
-**/*.quarto_ipynb
-
-/.quarto/
-**_extensions**

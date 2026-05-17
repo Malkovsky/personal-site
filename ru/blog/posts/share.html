@@ -1,0 +1,287 @@
+<div class="post-share" data-share-widget data-share-copy-label="Копировать" data-share-copied-label="Скопировано">
+  <button class="post-share__button" type="button" aria-haspopup="dialog">
+    <span class="post-share__button-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" focusable="false">
+        <path d="M15 5.6 20.4 11 15 16.4v-3.1h-3.2c-3 0-5.2 1-6.8 3.1.7-4 3-6.8 6.8-6.8H15v-4z"/>
+      </svg>
+    </span>
+    <span>Поделиться</span>
+  </button>
+  <div class="post-share__overlay" hidden>
+    <div class="post-share__dialog" role="dialog" aria-modal="true" aria-labelledby="post-share-title">
+      <div class="post-share__header">
+        <h2 id="post-share-title">Поделиться</h2>
+        <button class="post-share__close" type="button" aria-label="Закрыть окно">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7 4.3 4.3l6.3 6.3 6.3-6.3z"/>
+          </svg>
+        </button>
+      </div>
+      <label class="post-share__label" for="post-share-url">Ссылка</label>
+      <div class="post-share__row">
+        <input id="post-share-url" class="post-share__input" type="text" readonly>
+        <button class="post-share__copy" type="button">Копировать</button>
+      </div>
+      <div class="post-share__status" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+.post-share {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 1.25rem;
+}
+
+.post-share__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 0;
+  border-radius: 999px;
+  background: #f2f2f2;
+  color: #0f0f0f;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.15s, box-shadow 0.15s;
+}
+
+.post-share__button:hover {
+  background: #e5e5e5;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.post-share__button-icon,
+.post-share__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-share__button-icon svg,
+.post-share__close svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+}
+
+.post-share__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.post-share__overlay[hidden] {
+  display: none;
+}
+
+.post-share__dialog {
+  width: min(34rem, 100%);
+  padding: 1.25rem;
+  border-radius: 12px;
+  background: #fff;
+  color: #0f0f0f;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.post-share__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.post-share__header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.post-share__close {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.post-share__close:hover {
+  background: #f2f2f2;
+}
+
+.post-share__label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #444;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.post-share__row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.post-share__input {
+  min-width: 0;
+  flex: 1;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  background: #f9f9f9;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+}
+
+.post-share__copy {
+  border: 0;
+  border-radius: 999px;
+  background: #065fd4;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+
+.post-share__copy:hover {
+  background: #0756bf;
+}
+
+.post-share__status {
+  min-height: 1.25rem;
+  margin-top: 0.45rem;
+  color: #06a77d;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 576px) {
+  .post-share {
+    justify-content: stretch;
+  }
+
+  .post-share__button {
+    justify-content: center;
+  }
+
+  .post-share__row {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .post-share__button {
+    background: #303030;
+    color: #f1f1f1;
+  }
+
+  .post-share__button:hover,
+  .post-share__close:hover {
+    background: #3f3f3f;
+  }
+
+  .post-share__dialog {
+    background: #212121;
+    color: #f1f1f1;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .post-share__label {
+    color: #aaa;
+  }
+
+  .post-share__input {
+    border-color: #3f3f3f;
+    background: #181818;
+    color: #f1f1f1;
+  }
+}
+
+body.post-share-open {
+  overflow: hidden;
+}
+</style>
+
+<script>
+(() => {
+  const widget = document.querySelector("[data-share-widget]");
+  if (!widget) {
+    return;
+  }
+
+  const main = document.querySelector("main.content, #quarto-document-content");
+  if (main) {
+    main.insertBefore(widget, main.firstElementChild);
+  }
+
+  const button = widget.querySelector(".post-share__button");
+  const overlay = widget.querySelector(".post-share__overlay");
+  const dialog = widget.querySelector(".post-share__dialog");
+  const close = widget.querySelector(".post-share__close");
+  const input = widget.querySelector(".post-share__input");
+  const copy = widget.querySelector(".post-share__copy");
+  const status = widget.querySelector(".post-share__status");
+  const pageUrl = new URL(window.location.href);
+  pageUrl.hash = "";
+  input.value = pageUrl.toString();
+
+  const openDialog = () => {
+    overlay.hidden = false;
+    document.body.classList.add("post-share-open");
+    input.focus();
+    input.select();
+  };
+
+  const closeDialog = () => {
+    overlay.hidden = true;
+    document.body.classList.remove("post-share-open");
+    button.focus();
+  };
+
+  button.addEventListener("click", () => {
+    openDialog();
+  });
+
+  close.addEventListener("click", () => {
+    closeDialog();
+  });
+
+  overlay.addEventListener("click", (event) => {
+    if (!dialog.contains(event.target)) {
+      closeDialog();
+    }
+  });
+
+  copy.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(input.value);
+      status.textContent = widget.dataset.shareCopiedLabel;
+      copy.textContent = widget.dataset.shareCopiedLabel;
+      setTimeout(() => {
+        status.textContent = "";
+        copy.textContent = widget.dataset.shareCopyLabel;
+      }, 1600);
+    } catch {
+      input.select();
+      document.execCommand("copy");
+      status.textContent = widget.dataset.shareCopiedLabel;
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !overlay.hidden) {
+      closeDialog();
+    }
+  });
+})();
+</script>

@@ -1,160 +1,159 @@
-# Bilingual Personal Website & Blog
+# Nikolay Malkovsky Personal Site
 
-A professional personal website and blog built with [Quarto](https://quarto.org), supporting both English and Russian languages.
+This repository contains a Quarto-based personal website and bilingual blog for
+Nikolay Malkovsky. The site has separate English and Russian Quarto projects
+that are rendered into a shared `_site/` output directory.
 
-## 🌍 Multilingual Support
+## Languages
 
-This website is available in two languages:
-- 🇬🇧 English (`/en`)
-- 🇷🇺 Russian (`/ru`)
+- English content: `en/`
+- Russian content: `ru/`
+- Generated output: `_site/`
 
-Each language version is completely separate with its own navigation, content, and configuration.
+The English and Russian versions have separate navigation, metadata, pages, and
+blog posts. Blog posts are paired by date and slug, but each language has its
+own `index.qmd`.
 
-## 📁 Project Structure
+## Project Structure
 
-```
+```text
 blog/
-├── en/                      # English content
-│   ├── _quarto.yml          # English site configuration
-│   ├── index.qmd            # English homepage
+├── en/
+│   ├── _quarto.yml
+│   ├── index.qmd
 │   ├── about.qmd
 │   ├── contact.qmd
 │   ├── resume.qmd
 │   ├── publications.qmd
 │   ├── blog/
 │   │   ├── index.qmd
-│   │   └── posts/           # Blog posts (shared between languages)
+│   │   └── posts/
+│   │       ├── _metadata.yml
+│   │       └── YYYY-MM-DD_slug/
+│   │           ├── index.qmd
+│   │           └── thumbnail.png
 │   └── projects/
 │       └── index.qmd
-├── ru/                      # Russian content
-│   ├── _quarto.yml          # Russian site configuration
-│   ├── index.qmd            # Russian homepage
+├── ru/
+│   ├── _quarto.yml
+│   ├── index.qmd
 │   ├── about.qmd
 │   ├── contact.qmd
 │   ├── resume.qmd
 │   ├── publications.qmd
 │   ├── blog/
-│   │   └── index.qmd
+│   │   ├── index.qmd
+│   │   └── posts/
+│   │       ├── _metadata.yml
+│   │       └── YYYY-MM-DD_slug/
+│   │           ├── index.qmd
+│   │           └── thumbnail.png
 │   └── projects/
 │       └── index.qmd
-├── _site/                   # Generated site output
-│   ├── index.html           # Language selector page
-│   ├── en/                  # English site
-│   └── ru/                  # Russian site
 ├── images/                  # Shared images
-├── styles/                  # Shared styles
+├── styles/                  # Shared SCSS
+├── cv.tex                   # CV source
 ├── index.html               # Root language selector
+├── build.sh                 # Linux/macOS build script
 ├── build.bat                # Windows build script
-├── build.sh                 # Unix/Linux/Mac build script
-└── README.md
+└── _site/                   # Generated output, do not edit by hand
 ```
 
-## 🚀 Building the Site
+## Build
 
-### Windows
-```bash
-build.bat
-```
+Requirements:
 
-### Unix/Linux/Mac
-```bash
-chmod +x build.sh
+- Quarto
+- Python/Jupyter only if a post uses executable notebook-style content
+- TinyTeX/LaTeX only for pages or assets that require PDF/TeX rendering
+
+Linux/macOS:
+
+```sh
 ./build.sh
 ```
 
-### Manual Build
-```bash
-# Build English version
-cd en
-quarto render
-cd ..
+Windows:
 
-# Build Russian version
-cd ru
-quarto render
-cd ..
-
-# Copy language selector
-copy index.html _site\index.html    # Windows
-cp index.html _site/index.html      # Unix/Mac
+```bat
+build.bat
 ```
 
-## 🎨 Customization
+Manual build:
 
-### Updating Content
+```sh
+cd en
+quarto render
+cd ../ru
+quarto render
+cd ..
+cp index.html _site/index.html
+cp -r images _site
+```
 
-1. **English content**: Edit files in the `en/` directory
-2. **Russian content**: Edit files in the `ru/` directory
-3. **Shared resources**: Images go in `images/`, styles in `styles/`
+The GitHub Pages workflow in `.github/workflows/publish_site.yml` builds the
+site in the official Quarto container and uploads `_site/`.
 
-### Configuration
+The Unix build script also installs the Quarto Font Awesome extension if needed,
+copies shared `images/` into `_site/`, and copies `cv.pdf` into `_site/en/`.
 
-Each language has its own `_quarto.yml` file:
-- `en/_quarto.yml` - English site settings
-- `ru/_quarto.yml` - Russian site settings
+## Adding a Blog Post
 
-### Language Switcher
+Create matching folders for both languages:
 
-The language switcher appears in the top-right navigation:
-- English site shows: 🇷🇺 RU (links to Russian version)
-- Russian site shows: 🇬🇧 EN (links to English version)
+```text
+en/blog/posts/YYYY-MM-DD_slug/
+ru/blog/posts/YYYY-MM-DD_slug/
+```
 
-## 📝 Adding Blog Posts
+Each folder should contain an `index.qmd`. Put post-local images and data next
+to the post, either directly in the folder or in a local `images/` subfolder.
 
-Blog posts are stored in `en/blog/posts/` and are shared between both language versions. The blog index pages (`en/blog/index.qmd` and `ru/blog/index.qmd`) display the same posts with localized titles and descriptions.
+Use this front matter shape:
 
-To add a new blog post:
+```yaml
+---
+title: "Your Title"
+description: "1-2 sentence summary of the post."
+author: "Nikolay Malkovsky"
+date: "YYYY-MM-DD"
+categories: [tag1, tag2, tag3]
+image: "thumbnail.png"
+draft: false
+---
+```
 
-1. Create a new directory in `en/blog/posts/YYYY-MM-DD-post-name/`
-2. Add your content in `index.qmd`
-3. The post will appear in both language versions
+For Russian posts, use Russian title, description, and body text. Existing
+posts commonly use `author: "Николай Мальковский"` in Russian articles.
 
-## 🌐 Deployment
+Keep the same date and slug in both languages. Keep content language-specific:
+do not mix English and Russian in one post unless quoting or showing an example.
 
-The built site is in the `_site` directory. Deploy this directory to your web hosting service:
+## Content Conventions
 
-- **GitHub Pages**: Push `_site` to `gh-pages` branch
-- **Netlify**: Connect repository and set build command to `build.bat` or `build.sh`
-- **Vercel**: Similar to Netlify
-- **Custom hosting**: Upload `_site` directory via FTP/SFTP
+- Write posts as Quarto Markdown (`.qmd`).
+- Use fenced code blocks with language tags, for example `sh`, `python`, or
+  `cpp`.
+- Prefer relative paths for assets.
+- Use a `thumbnail.png` or equivalent image referenced by `image:` for listing
+  cards.
+- Keep generated files out of source edits: do not manually edit `_site/`,
+  `.quarto/`, Jupyter caches, or freeze output.
 
-## 📄 Features
+## Main Configuration Files
 
-- ✅ Fully responsive design
-- ✅ Dark/light theme support
-- ✅ Blog with Jupyter notebook support
-- ✅ Projects showcase
-- ✅ Publications list
-- ✅ Resume/CV page
-- ✅ Contact information
-- ✅ Search functionality (per language)
-- ✅ RSS feeds (per language)
-- ✅ Language switcher in navigation
-- ✅ SEO optimized
+- `en/_quarto.yml` - English site configuration
+- `ru/_quarto.yml` - Russian site configuration
+- `styles/custom.scss` - shared styling
+- `en/blog/posts/_metadata.yml` - metadata defaults for English posts
+- `ru/blog/posts/_metadata.yml` - metadata defaults for Russian posts
 
-## 🔧 Requirements
+The root `_quarto.yml` exists, but the normal site build uses the language-level
+Quarto projects.
 
-- [Quarto](https://quarto.org/docs/get-started/) (latest version)
-- Python (for Jupyter notebook support, optional)
-- R (optional)
+## Deployment
 
-## 📖 Documentation
+The published artifact is `_site/`. The default GitHub Actions workflow builds
+on pushes to `main` and deploys `_site/` to GitHub Pages.
 
-For more information about Quarto websites, visit:
-- [Quarto Websites Guide](https://quarto.org/docs/websites/)
-- [Quarto Publishing Guide](https://quarto.org/docs/publishing/)
-
-## 🤝 Contributing
-
-Feel free to customize this template for your own use!
-
-## 📧 Contact
-
-Update the contact information in:
-- `en/contact.qmd`
-- `ru/contact.qmd`
-- Both `_quarto.yml` files
-
-## 📄 License
-
-This template is free to use and modify for your personal website.
+For manual hosting, build the site and upload the contents of `_site/`.
