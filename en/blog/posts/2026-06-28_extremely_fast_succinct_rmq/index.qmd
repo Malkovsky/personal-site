@@ -1,5 +1,5 @@
 ---
-title: "Extremely Fast and Succinct RMQ with Wide Segment Trees"
+title: "Extremely Fast and Succinct RMQ"
 description: "This article describes a cutting edge implementation of the data structures for the range minimum queries -- a fundamental problem in string processing, compression and search indecies. These implementations are extremely fast but yet succinct, i.e. storing very low amount of auxiliary memory solve the problem."
 author: "Nikolay Malkovsky"
 date: "2026-06-28"
