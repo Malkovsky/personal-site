@@ -1,22 +1,24 @@
 ---
-title: "Extremely Fast and Succinct RMQ"
+title: "Extremely Fast and Succinct RMQ with Wide Segment Trees"
 description: "This article describes a cutting edge implementation of the data structures for the range minimum queries -- a fundamental problem in string processing, compression and search indecies. These implementations are extremely fast but yet succinct, i.e. storing very low amount of auxiliary memory solve the problem."
 author: "Nikolay Malkovsky"
 date: "2026-06-28"
 categories: [C++, algorithms, succinct data structures, RMQ, SIMD]
-image: "images/wide_segment_tree.svg"
+image: "thumbnail.png"
 draft: false
 bibliography: references.bib
 ---
+
+![](images/title_page.svg)
 
 
 This note describes several advanced techniques for static RMQ, where the
 array is known in advance and does not change, but the queries are not known
 ahead of time. The goal is to build two succinct RMQ variants:
 
-- one that uses $1.05n$ auxiliary bits per input value and sometimes accesses the
+- one that uses $1.05n$ auxiliary bits and sometimes accesses the
   original array;
-- one that uses $2.1n$ auxiliary bits per input value and never accesses the
+- one that uses $2.1n$ auxiliary bits and never accesses the
   original array.
 
 Both implementations are fast in practice, reaching roughly $20$ to $30$ ns on
@@ -46,6 +48,8 @@ The idea is simple: for each position $i$, precompute $RMQ(i, i + 2^k)$ for all
 $k$ such that $i + 2^k \leq n$. To answer $RMQ(l, r)$, choose $k$ such that
 $2^k \leq r - l < 2^{k+1}$ and compare the minima from the two overlapping
 intervals $RMQ(l, l + 2^k)$ and $RMQ(r - 2^k, r)$.
+
+![Sparse table query](images/sparse_table_query.svg){fig-alt="Sparse table rows store arg-min positions for intervals of power-of-two length; a query is answered by comparing two overlapping intervals."}
 
 Sparse tables are good both in theory and in practice, but their
 $\mathcal{O}(n \log n)$ memory usage limits practical applications. For
@@ -195,6 +199,8 @@ left and right children, the representation is:
 ```
 "(" FNBP(left child of node) ")" FNBP(right child of node)
 ```
+
+![Cartesian tree BP encodings](images/cartesian_tree_8_example_bp.svg){fig-alt="The same Cartesian tree shown with standard Euler balanced parentheses and the Ferrada-Navarro BP sequence."}
 
 This is the Ferrada-Navarro balanced-parentheses representation from
 @Ferrada2017.
@@ -445,23 +451,34 @@ const __m128i byte_prefix = excess_prefix_sum_16x_i8(byte_delta);
 const __m128i byte_prefix_before = _mm_slli_si128(byte_prefix, 1);
 ```
 
-The local-min lookup gives the best depth reached inside each nibble. For this
-query, the right boundary cuts nibble `3` down to only its first bit, so the
-full-nibble high-lane value `0` is replaced by the partial value `+1`.
-
-```text
-lo_local_min:       [ +1, 0 ]     // 1110 has min +1; 1100 has min 0
-hi_local_min full:  [ -2, 0 ]     // 0100 has min -2; 1010 has min 0
-hi_local_min used:  [ -2,+1 ]     // nibble 3 only uses its first bit: 1
-```
+The next table lookup returns the local minimum inside each full 4-bit block.
+The table `excess_lut_min_sse` is organized like `delta`: the input nibble is an
+index, and the result is the minimum local excess reached after reading at least
+one bit of that nibble.
 
 ```cpp
 __m128i lo_local_min = _mm_shuffle_epi8(excess_lut_min_sse, lo_nibbles);
 __m128i hi_local_min = _mm_shuffle_epi8(excess_lut_min_sse, hi_nibbles);
 ```
 
-The low nibble starts at the byte boundary. The high nibble starts after the
-low nibble, so its base also includes `lo_delta`:
+Real query boundaries rarely coincide with 4-bit boundaries. In the actual
+implementation, boundary nibbles are easier to handle separately: either with a
+small scalar table, or with the same table plus an active-position mask. The
+SIMD middle then receives only full 4-bit blocks. In this example, the left
+boundary already coincides with the start of block `1`, while the right boundary
+cuts block `3` down to its first bit. To keep the walkthrough in one place, we
+substitute the partial value `+1` for block `3` instead of using the full value
+for nibble `1010`.
+
+```text
+lo_local_min:       [ +1, 0 ]     // 1110 has min +1; 1100 has min 0
+hi_local_min full:  [ -2, 0 ]     // 0100 has min -2; 1010 has min 0
+hi_local_min used:  [ -2,+1 ]     // block 3 only uses its first bit: 1
+```
+
+The low nibble starts at the byte boundary and uses `byte_prefix_before` as its
+base. The high nibble starts after the low nibble, so its base also includes
+`lo_delta`:
 
 ```text
 lo_candidates = byte_prefix_before + lo_local_min
@@ -480,33 +497,34 @@ const __m128i hi_candidates =
     _mm_add_epi8(_mm_add_epi8(byte_prefix_before, lo_delta), hi_local_min);
 ```
 
-For `[4, 13)`, the boundary chunks can be processed separately from the SIMD
-middle. Conceptually, the active part of the four nibbles is:
-
+Now we remove inactive blocks from consideration. Conceptually, the active part
+of the query `[4, 13)` is:
 
 ```text
 chunk:                 0       1        2       3
 bits:               1110    0100     1100    1010
-query mask:         0000    1111     1111    1000
+active part:           -    0100     1100       1
 ```
 
-After inactive lanes are replaced with the sentinel `127`, the candidate vectors
-for this example are:
+Inactive candidates are replaced with the sentinel value `127`. This is larger
+than any excess inside a 128-bit block, so it cannot become the minimum:
 
 ```text
 masked_lo = [127, 0]
 masked_hi = [  0, 1]
 ```
 
-First compare the low and high candidate in each byte lane:
+First compare the low and high 4-bit-block candidate inside each byte lane:
 
 ```text
 pairwise_min = min(masked_lo, masked_hi)
              = [0, 0]
 ```
 
-Then reduce the 16 signed byte lanes to one scalar minimum, using the same
-doubling pattern as the prefix-sum code:
+Then reduce the 16 signed byte lanes to one scalar minimum. Here
+`_mm_alignr_epi8(v, v, shift)` is used as a byte rotation of the same register.
+After comparisons with shifts `8`, `4`, `2`, and `1`, every byte lane contains
+the minimum over the original 16 lanes, so we can read lane `0`.
 
 ```cpp
 v = _mm_min_epi8(v, _mm_alignr_epi8(v, v, 8));
@@ -517,36 +535,39 @@ candidate_min = static_cast<int>(
     static_cast<int8_t>(_mm_extract_epi8(v, 0)));
 ```
 
-After shifts by `8`, `4`, `2`, and `1`, lane `0` contains the minimum over all
-16 lanes. Here:
+In this example:
 
 ```text
 candidate_min = 0
 ```
 
-To recover the first nibble attaining this value, compare candidates with
-`candidate_min` and convert the first set bit in each mask back to the original
-nibble numbering:
+Now we need the first 4-bit block that attains this minimum. We compare
+`masked_lo` and `masked_hi` with `candidate_min`, convert the result to bit masks
+with `movemask`, take the first set bit, and map the byte lane back to the
+4-bit-block index:
 
 ```text
-masked_lo == 0: [false, true ]  => low lane 1  => nibble index 2
-masked_hi == 0: [true,  false]  => high lane 0 => nibble index 1
-first winning nibble index = min(2, 1) = 1
+masked_lo == 0: [false, true ]  => low byte 1  => block index 2
+masked_hi == 0: [true,  false]  => high byte 0 => block index 1
+first winning block index = min(2 * 1, 2 * 0 + 1) = 1
 ```
 
-Nibble `1` is `0100` with minimum excess `-2` at position `4`, so the first
-minimum reached inside the block is:
+Finally, the `offset` table gives the first local position of the minimum inside
+the winning block. The important convention is that `local_offset` is in the
+range `1..4`: it is not the bit index inside the block, but the excess position
+after reading that many bits. For block `1`, namely `0100`, the local minimum
+`-2` is reached for the first time after four bits.
 
 ```text
-offset = 4 * nibble_index + local_offset
-       = 4 * 1 + 4
-       = 8
+excess position = 4 * block_index + local_offset
+                = 4 * 1 + 4
+                = 8
 ```
 
-This is also the first interior zero-depth position in the BP sequence. In the
-query `[4, 13)`, position `12` also attains depth `0`, but first-minimum
-tie-breaking keeps position `8`. Therefore `RMQ(0, 6)` returns
-`rank0(8) - 1 = 3`, which is the position of `A[3] = 1`.
+This is the first interior zero-depth position in the BP sequence. In the query
+`[4, 13)`, position `12` also attains depth `0`, but first-minimum tie-breaking
+keeps position `8`. Therefore `RMQ(0, 6)` returns `rank0(8) - 1 = 3`, which is
+the position of `A[3] = 1`.
 
 For a short BP block, `rank0(pos)` is just a masked `popcount` over the zero
 bits before `pos`:
@@ -612,12 +633,12 @@ over the available benchmark sizes:
 ![Hybrid RMQ random-query timings](images/rmq_hybrid_random_queries.png){fig-alt="Random-query timings for HybridBTree and CartesianHybridBTree RMQ variants."}
 
 The final implementations are available in Pixie [@Malkovsky2026Pixie], the entry point is the RMQ header
-[`include/pixie/rmq.h`](https://github.com/Malkovsky/pixie/blob/main/include/pixie/rmq.h), corresponding two implementations are classes `HybridBtree` and `CartesianHybridBTree`.
+[`include/pixie/rmq.h`](https://github.com/Malkovsky/pixie/blob/main/include/pixie/rmq.h), corresponding two implementations are classes `HybridBTree` and `CartesianHybridBTree`.
 
 
 ## Pixie disclaimer
 
-I'm working on succinct data structure library an related problems, If I got your interest and you want to collaborate -- feel free to contact me.
+I'm working on succinct data structure library [pixie](https://github.com/Malkovsky/pixie), If I got your interest and you want to collaborate -- feel free to contact me.
 
 ## References
 
