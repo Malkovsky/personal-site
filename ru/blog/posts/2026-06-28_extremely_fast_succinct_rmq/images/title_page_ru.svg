@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <title>Титульная страница для быстрого компактного RMQ</title>
-  <desc>Обложка 2x2: спекулятивное покрытие, декартово дерево BP/FNBP, широкое сегментное дерево и фрагмент SIMD-кода для excess_min.</desc>
+  <desc>Обложка 2x2: спекулятивное покрытие, декартово дерево BP/FNBP, широкое дерево отрезков и фрагмент SIMD-кода для excess_min.</desc>
 
   <defs>
     <clipPath id="speculative-panel-clip">
