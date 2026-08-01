@@ -7,6 +7,8 @@ Primary purpose: agents assist with writing new blog articles for this Quarto-ba
 - Blog posts are Quarto documents under `en/blog/posts/` and `ru/blog/posts/`.
 - Output is generated into `_site/` (do not edit by hand).
 - Shared styles live in `styles/` and shared assets in `images/`.
+- The CV source is `cv/cv.tex`, while the generated `cv.pdf` stays at repository root because `build.sh` copies it into `_site/en/`; update both together.
+- Build the CV from repository root with `pdflatex -interaction=nonstopmode -halt-on-error cv/cv.tex` twice. The classic `moderncv` style requires Font Awesome (Ubuntu package `texlive-fonts-extra`).
 
 ## When creating a new blog post
 1. Create a new folder per language:
