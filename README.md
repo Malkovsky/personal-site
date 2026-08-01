@@ -89,6 +89,7 @@ quarto render
 cd ..
 cp index.html _site/index.html
 cp -r images _site
+cp cv.pdf _site/en/cv.pdf
 ```
 
 The GitHub Pages workflow in `.github/workflows/publish_site.yml` builds the

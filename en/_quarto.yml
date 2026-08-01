@@ -44,7 +44,7 @@ website:
   
   page-footer:
     left: |
-      Copyright © 2026 Your Name
+      Copyright © 2026 Nikolay Malkovsky
     right:
       - icon: github
         href: https://github.com/Malkovsky
@@ -54,9 +54,8 @@ website:
 format:
   html:
     theme: 
-      light: cosmo
-      dark: darkly
-    css: ../styles/custom.scss
+      light: [cosmo, ../styles/custom.scss]
+      dark: [darkly, ../styles/custom.scss]
     toc: true
     toc-depth: 3
     link-external-newwindow: true

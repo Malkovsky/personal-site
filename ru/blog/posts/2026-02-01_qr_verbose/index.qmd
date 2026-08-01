@@ -97,6 +97,7 @@ qr-verbose -m 0 -v 3 \
 ![](images/qr_code_zig_zag.png)
 
 :::
+:::
 
 Едем дальше, давайте уберём маску
 

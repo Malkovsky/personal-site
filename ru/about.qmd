@@ -76,7 +76,7 @@ title-block-banner: true
 - **Email** - [malkovskynv@gmail.com](mailto:malkovskynv@gmail.com)
 - **GitHub** - [@Malkovsky](https://github.com/Malkovsky)
 - **Habr** - [malkovsky](https://habr.com/ru/users/malkovsky)
-- **Telegram** - @malkovskynv
+- **Telegram** - [@malkovskynv](https://t.me/malkovskynv)
 
 ---
 

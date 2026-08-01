@@ -57,14 +57,14 @@ I'm a applied mathematitian and a software engineer, my passion is scientific co
 ### Interactive Visualization
 Interactive algorithm visualizations in Python. Recommended for educational purposes, not ideal for complex visualizations.
 
-<!-- [View Project →](projects/index.qmd) -->
+[View Project →](projects/index.qmd)
 :::
 
 ::: {.g-col-12 .g-col-md-6}
 ### QR Verbose
 A utility and library for advanced QR code generation with verbose diagnostics. Intended primarily for educational purposes — if you want to understand how a QR code works, this tool is a good place to start.
 
-<!-- [View Project →](projects/index.qmd) -->
+[View Project →](projects/index.qmd)
 :::
 
 :::

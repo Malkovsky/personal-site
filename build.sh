@@ -3,6 +3,9 @@
 echo "Building bilingual website..."
 echo ""
 
+# Quarto will not clean output directories outside each language project.
+rm -rf _site/en _site/ru
+
 echo "[1/3] Rendering English version..."
 cd en
 quarto add --no-prompt quarto-ext/fontawesome

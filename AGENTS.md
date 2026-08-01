@@ -8,7 +8,9 @@ Primary purpose: agents assist with writing new blog articles for this Quarto-ba
 - Output is generated into `_site/` (do not edit by hand).
 - Shared styles live in `styles/` and shared assets in `images/`.
 - The CV source is `cv/cv.tex`, while the generated `cv.pdf` stays at repository root because `build.sh` copies it into `_site/en/`; update both together.
-- Build the CV from repository root with `pdflatex -interaction=nonstopmode -halt-on-error cv/cv.tex` twice. The classic `moderncv` style requires Font Awesome (Ubuntu package `texlive-fonts-extra`).
+- Build the CV from repository root with `pdflatex -interaction=nonstopmode -halt-on-error cv/cv.tex` twice. The CV uses Font Awesome (Ubuntu package `texlive-fonts-extra`).
+- CV asset paths such as `images/profile.jpg` are intentionally repository-root-relative; compiling from inside `cv/` will not resolve them.
+- The published CV uses the self-contained `article`/`paracol` design in `cv/cv.tex`; files under `cv/variants/` are design experiments, not site inputs.
 
 ## When creating a new blog post
 1. Create a new folder per language:

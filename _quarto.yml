@@ -3,9 +3,9 @@ project:
   output-dir: _site
 
 website:
-  title: "Your Name"
+  title: "Nikolay Malkovsky"
   description: "Personal website and blog"
-  site-url: https://malkovsky.github.io/personal-site/ru
+  site-url: https://malkovsky.github.io/personal-site/
   repo-url: https://github.com/Malkovsky/personal-site
   repo-actions: [edit, issue]
   
@@ -32,11 +32,11 @@ website:
       - icon: github
         href: https://github.com/Malkovsky
       - icon: linkedin
-        href: https://linkedin.com/in/yourusername
+        href: https://linkedin.com/in/nikolay-malkovsky-a5479b140
   
   page-footer:
     left: |
-      Copyright © 2026 Your Name
+      Copyright © 2026 Nikolay Malkovsky
     right:
       - icon: github
         href: https://github.com/Malkovsky
@@ -46,9 +46,8 @@ website:
 format:
   html:
     theme: 
-      light: cosmo
-      dark: darkly
-    css: styles/custom.scss
+      light: [cosmo, styles/custom.scss]
+      dark: [darkly, styles/custom.scss]
     toc: true
     toc-depth: 3
     link-external-newwindow: true

@@ -36,7 +36,7 @@ website:
         href: https://github.com/Malkovsky
         aria-label: "GitHub"
       - icon: linkedin
-        href: https://linkedin.com/in/nikolay-malkovsky-a5479b140/
+        href: https://linkedin.com/in/nikolay-malkovsky-a5479b140
         aria-label: "LinkedIn"
       - text: "![](https://habrastorage.org/getpro/habr/company/7e4/7b8/e31/7e47b8e31d0efe9f398461278a16a357.png){width=20px}"
         href: https://habr.com/ru/users/malkovsky/
@@ -54,9 +54,8 @@ website:
 format:
   html:
     theme: 
-      light: cosmo
-      dark: darkly
-    css: ../styles/custom.scss
+      light: [cosmo, ../styles/custom.scss]
+      dark: [darkly, ../styles/custom.scss]
     toc: true
     toc-depth: 3
     link-external-newwindow: true

@@ -2,8 +2,13 @@
 echo Building bilingual website...
 echo.
 
+REM Quarto will not clean output directories outside each language project.
+if exist _site\en rmdir /S /Q _site\en
+if exist _site\ru rmdir /S /Q _site\ru
+
 echo [1/3] Rendering English version...
 cd en
+quarto add --no-prompt quarto-ext/fontawesome
 quarto render
 cd ..
 echo English version complete!
@@ -11,6 +16,7 @@ echo.
 
 echo [2/3] Rendering Russian version...
 cd ru
+quarto add --no-prompt quarto-ext/fontawesome
 quarto render
 cd ..
 echo Russian version complete!
@@ -18,6 +24,8 @@ echo.
 
 echo [3/3] Copying language selector...
 copy index.html _site\index.html
+xcopy images _site\images /E /I /Y
+copy /Y cv.pdf _site\en\cv.pdf
 echo Language selector copied!
 echo.
 

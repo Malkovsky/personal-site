@@ -10,6 +10,7 @@ _freeze/
 *.quarto_ipynb
 **/*_files/
 **/.jupyter_cache/
+cv/*
 
 # R
 .Rproj.user
