@@ -42,7 +42,7 @@ format:
 - Очистка текста на основе трансформеров с нулевым обучением
 - R&D для основных частей CTC end-to-end ASR систем, WFST-based адаптация контекста
 
-**Ключевые технологии** - С++, Python, gRPC, PyTorch, LLM
+**Ключевые технологии** - Python, PyTorch, ASR
 
 ---
 
@@ -62,8 +62,6 @@ format:
 
 - Преподавал [курс по выпуклой оптимизации](https://nbviewer.jupyter.org/github/Malkovsky/python-examples/tree/master/optimization_course/)
 - Наставничество студентов по алгоритмическим и оптимизационным темам
-
-**Ключевые технологии** - Python, Jupyter, NumPy, SciPy
 
 ---
 
@@ -104,6 +102,29 @@ format:
 - Hardware-aware оптимизация
 :::
 
+::: {.g-col-12 .g-col-md-6}
+**Стек Python**
+- NumPy, SciPy
+- scikit-learn
+- Matplotlib
+- PyTorch/TorchScript
+- Jupyter
+:::
+
+::: {.g-col-12 .g-col-md-6}
+**ASR-фреймворки**
+- Kaldi
+- DeepSpeech
+- NeMo
+:::
+
+::: {.g-col-12 .g-col-md-6}
+**Области математики**
+- Выпуклая оптимизация
+- Продвинутые графовые алгоритмы
+- Вычисления в конечных полях
+:::
+
 :::
 
 ### Лидерство и Soft Skills
@@ -118,7 +139,7 @@ format:
 ## Языки
 
 - **Русский** - Родной
-- **Английский** - fluent
+- **Английский** - Свободное владение
 
 ---
 

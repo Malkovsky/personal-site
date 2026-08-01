@@ -7,6 +7,8 @@ Primary purpose: agents assist with writing new blog articles for this Quarto-ba
 - Blog posts are Quarto documents under `en/blog/posts/` and `ru/blog/posts/`.
 - Output is generated into `_site/` (do not edit by hand).
 - Shared styles live in `styles/` and shared assets in `images/`.
+- Build the bilingual site from the repository root with `bash build.sh`; its explicit `_site/en` and `_site/ru` cleanup is required because Quarto will not clean output directories outside each language project.
+- Keep `styles/custom.scss` in each language config's `theme` array, not under `css`; an external `css` path is emitted without compilation or copying and breaks in `_site/`.
 - The CV source is `cv/cv.tex`, while the generated `cv.pdf` stays at repository root because `build.sh` copies it into `_site/en/`; update both together.
 - Build the CV from repository root with `pdflatex -interaction=nonstopmode -halt-on-error cv/cv.tex` twice. The CV uses Font Awesome (Ubuntu package `texlive-fonts-extra`).
 - CV asset paths such as `images/profile.jpg` are intentionally repository-root-relative; compiling from inside `cv/` will not resolve them.

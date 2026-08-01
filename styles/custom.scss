@@ -1,7 +1,7 @@
 /*-- scss:defaults --*/
 
 // Custom color scheme
-$primary: #2E86AB;
+$primary: #277694;
 $secondary: #A23B72;
 $success: #06A77D;
 $info: #17A2B8;
@@ -34,7 +34,7 @@ $spacer: 1rem;
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto 2rem;
-    color: #555;
+    color: var(--bs-body-color);
   }
   
   .btn {
@@ -63,7 +63,7 @@ $spacer: 1rem;
 
 // Project cards
 .project-card {
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--bs-border-color);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -102,7 +102,7 @@ $spacer: 1rem;
   }
   
   em {
-    color: #666;
+    color: var(--bs-secondary-color);
   }
   
   a {
@@ -134,7 +134,7 @@ $spacer: 1rem;
 // Code block styling
 pre {
   border-radius: 6px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--bs-border-color);
 }
 
 code {
@@ -175,7 +175,7 @@ code {
 
 // Title block banner styling
 .quarto-title-block .quarto-title-banner {
-  background: #C73E1D;
+  background: #0a1699;
   color: #fff;
 }
 
@@ -185,12 +185,12 @@ code {
 
 // Footer styling
 .nav-footer {
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--bs-border-color);
   margin-top: 3rem;
   padding-top: 2rem;
   
   a {
-    color: #666;
+    color: var(--bs-secondary-color);
     
     &:hover {
       color: $primary;
@@ -212,8 +212,8 @@ a {
 .fa-github,
 .fa-brands.fa-github,
 .svg-inline--fa.fa-github {
-  color: #181717 !important;
-  fill: #181717;
+  color: var(--bs-body-color) !important;
+  fill: var(--bs-body-color);
 }
 
 .fa-linkedin,
@@ -274,7 +274,7 @@ table {
   margin: 1.5rem 0;
   
   th {
-    background-color: #f8f9fa;
+    background-color: var(--bs-tertiary-bg);
     font-weight: 600;
     padding: 0.75rem;
     border-bottom: 2px solid $primary;
@@ -282,11 +282,11 @@ table {
   
   td {
     padding: 0.75rem;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--bs-border-color);
   }
   
   tr:hover {
-    background-color: #f8f9fa;
+    background-color: var(--bs-tertiary-bg);
   }
 }
 
@@ -307,10 +307,23 @@ table {
   }
 }
 
-// Dark mode adjustments
-@media (prefers-color-scheme: dark) {
+// Quarto toggles this class independently of the operating-system preference.
+body.quarto-dark {
+  a {
+    color: #67c2e3;
+
+    &:hover {
+      color: #9adcf2;
+    }
+  }
+
+  .hero-banner h2,
+  .project-card h3 {
+    color: #67c2e3;
+  }
+
   .project-card {
-    border-color: #444;
+    border-color: #495057;
     
     &:hover {
       box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
@@ -318,7 +331,53 @@ table {
   }
   
   .publication {
-    border-left-color: lighten($primary, 20%);
+    border-left-color: #67c2e3;
+  }
+
+  pre {
+    border-color: #495057;
+  }
+
+  .nav-footer {
+    border-top-color: #495057;
+  }
+
+  table {
+    th,
+    tr:hover {
+      background-color: #2b3035;
+    }
+
+    td {
+      border-bottom-color: #495057;
+    }
+  }
+
+  .btn-primary {
+    color: #fff;
+  }
+
+  .btn-outline-primary {
+    color: #67c2e3;
+    border-color: #67c2e3;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .fa-linkedin,
+  .fa-brands.fa-linkedin,
+  .svg-inline--fa.fa-linkedin {
+    color: #70b7ff !important;
+    fill: #70b7ff;
+  }
+
+  .fa-envelope,
+  .fa-solid.fa-envelope,
+  .svg-inline--fa.fa-envelope {
+    color: #ff8274 !important;
+    fill: #ff8274;
   }
 }
 
