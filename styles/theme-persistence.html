@@ -1,0 +1,27 @@
+<script>
+(() => {
+  const isLocalPreview = window.location.protocol === "file:"
+    || window.location.hostname === "localhost"
+    || window.location.hostname === "127.0.0.1";
+
+  if (!isLocalPreview || !window.quartoToggleColorScheme) {
+    return;
+  }
+
+  const statePrefix = "quarto-color-scheme:";
+  const savedState = window.name.startsWith(statePrefix)
+    ? window.name.slice(statePrefix.length)
+    : null;
+
+  if (savedState === "alternate" && !document.body.classList.contains("quarto-dark")) {
+    window.quartoToggleColorScheme();
+  }
+
+  const quartoToggleColorScheme = window.quartoToggleColorScheme;
+  window.quartoToggleColorScheme = () => {
+    quartoToggleColorScheme();
+    window.name = statePrefix
+      + (document.body.classList.contains("quarto-dark") ? "alternate" : "default");
+  };
+})();
+</script>

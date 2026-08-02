@@ -1,12 +1,12 @@
 /*-- scss:defaults --*/
 
-// Custom color scheme
-$primary: #277694;
-$secondary: #A23B72;
-$success: #06A77D;
-$info: #17A2B8;
-$warning: #F18F01;
-$danger: #C73E1D;
+// Technical-editorial color scheme
+$primary: #216a82;
+$secondary: #8a6253;
+$success: #287a62;
+$info: #287a96;
+$warning: #b87518;
+$danger: #b64e45;
 
 // Typography
 $font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -17,6 +17,16 @@ $headings-font-weight: 600;
 $spacer: 1rem;
 
 /*-- scss:rules --*/
+
+body.quarto-light {
+  --bs-body-bg: #faf9f6;
+  --bs-body-bg-rgb: 250, 249, 246;
+  --bs-body-color: #263238;
+  --bs-body-color-rgb: 38, 50, 56;
+  --bs-secondary-color: #58666c;
+  --bs-tertiary-bg: #f0eee8;
+  --bs-border-color: #d8d5cd;
+}
 
 // Hero banner styling
 .hero-banner {
@@ -175,7 +185,8 @@ code {
 
 // Title block banner styling
 .quarto-title-block .quarto-title-banner {
-  background: #0a1699;
+  background: #173f4f;
+  border-bottom: 4px solid #d49a3a;
   color: #fff;
 }
 
@@ -309,21 +320,29 @@ table {
 
 // Quarto toggles this class independently of the operating-system preference.
 body.quarto-dark {
+  --bs-body-bg: #1b2226;
+  --bs-body-bg-rgb: 27, 34, 38;
+  --bs-body-color: #eef2f3;
+  --bs-body-color-rgb: 238, 242, 243;
+  --bs-secondary-color: #aeb9bd;
+  --bs-tertiary-bg: #252e33;
+  --bs-border-color: #3e4a50;
+
   a {
-    color: #67c2e3;
+    color: #78bdd2;
 
     &:hover {
-      color: #9adcf2;
+      color: #a8d9e6;
     }
   }
 
   .hero-banner h2,
   .project-card h3 {
-    color: #67c2e3;
+    color: #78bdd2;
   }
 
   .project-card {
-    border-color: #495057;
+    border-color: #3e4a50;
     
     &:hover {
       box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
@@ -331,25 +350,25 @@ body.quarto-dark {
   }
   
   .publication {
-    border-left-color: #67c2e3;
+    border-left-color: #78bdd2;
   }
 
   pre {
-    border-color: #495057;
+    border-color: #3e4a50;
   }
 
   .nav-footer {
-    border-top-color: #495057;
+    border-top-color: #3e4a50;
   }
 
   table {
     th,
     tr:hover {
-      background-color: #2b3035;
+      background-color: #252e33;
     }
 
     td {
-      border-bottom-color: #495057;
+      border-bottom-color: #3e4a50;
     }
   }
 
@@ -358,8 +377,8 @@ body.quarto-dark {
   }
 
   .btn-outline-primary {
-    color: #67c2e3;
-    border-color: #67c2e3;
+    color: #78bdd2;
+    border-color: #78bdd2;
 
     &:hover {
       color: #fff;
