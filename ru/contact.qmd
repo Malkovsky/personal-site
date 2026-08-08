@@ -27,7 +27,7 @@ title-block-banner: true
 
 ::: {.g-col-12 .g-col-md-6}
 ### Habr
-[![](https://habrastorage.org/getpro/habr/company/7e4/7b8/e31/7e47b8e31d0efe9f398461278a16a357.png){width=20px} malkovsky](https://habr.com/ru/users/malkovsky)
+[![](../images/habr.svg){width=20px} malkovsky](https://habr.com/ru/users/malkovsky)
 
 :::
 

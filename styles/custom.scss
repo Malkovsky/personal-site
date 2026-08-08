@@ -183,6 +183,20 @@ code {
   }
 }
 
+.habr-navbar-icon {
+  align-items: center;
+  background: #65a3be;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-flex;
+  font-size: 0.75rem;
+  font-weight: 700;
+  height: 20px;
+  justify-content: center;
+  line-height: 1;
+  width: 20px;
+}
+
 // Title block banner styling
 .quarto-title-block .quarto-title-banner {
   background: #173f4f;

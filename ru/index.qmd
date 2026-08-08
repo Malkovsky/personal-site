@@ -88,7 +88,7 @@ listing:
 :::
 
 ::: {.g-col-6 .g-col-md-3}
-[![](https://habrastorage.org/getpro/habr/company/7e4/7b8/e31/7e47b8e31d0efe9f398461278a16a357.png){width=20px} Habr](https://habr.com/ru/users/malkovsky/)
+[![](../images/habr.svg){width=20px} Habr](https://habr.com/ru/users/malkovsky/)
 :::
 
 ::: {.g-col-6 .g-col-md-3}
