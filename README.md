@@ -70,6 +70,7 @@ Requirements:
 Linux/macOS:
 
 ```sh
+./build_cv.sh
 ./build.sh
 ```
 
@@ -95,8 +96,9 @@ cp cv.pdf _site/en/cv.pdf
 The GitHub Pages workflow in `.github/workflows/publish_site.yml` builds the
 site in the official Quarto container and uploads `_site/`.
 
-The Unix build script also installs the Quarto Font Awesome extension if needed,
-copies shared `images/` into `_site/`, and copies `cv.pdf` into `_site/en/`.
+`build_cv.sh` regenerates `cv.pdf`. The Unix site build installs the Quarto Font
+Awesome extension if needed, copies shared `images/` into `_site/`, and copies
+the existing `cv.pdf` into `_site/en/`.
 
 ## Adding a Blog Post
 

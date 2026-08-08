@@ -33,14 +33,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Build site
+      - name: Set up build dependencies
         run: |
           apt-get update
           apt-get install -y --no-install-recommends xz-utils perl
           quarto install --no-prompt tinytex
           export PATH="$HOME/.TinyTeX/bin/x86_64-linux:$PATH"
+          tlmgr option repository https://mirrors.rit.edu/CTAN/systems/texlive/tlnet
           tlmgr install geometry microtype xcolor enumitem paracol ragged2e hyperref pgf fontawesome5 lm
-          bash build.sh
+      - name: Build CV
+        run: |
+          export PATH="$HOME/.TinyTeX/bin/x86_64-linux:$PATH"
+          bash build_cv.sh
+      - name: Build site
+        run: bash build.sh
       - name: Publish pages
         uses: actions/upload-pages-artifact@v3
         with:
