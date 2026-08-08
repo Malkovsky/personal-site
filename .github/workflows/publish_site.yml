@@ -38,6 +38,8 @@ jobs:
           apt-get update
           apt-get install -y --no-install-recommends xz-utils
           quarto install --no-prompt tinytex
+          export PATH="$HOME/.TinyTeX/bin/x86_64-linux:$PATH"
+          tlmgr install geometry microtype xcolor enumitem paracol ragged2e hyperref pgf fontawesome5 lm
           bash build.sh
       - name: Publish pages
         uses: actions/upload-pages-artifact@v3
